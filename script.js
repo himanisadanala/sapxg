@@ -3,20 +3,56 @@ const mainNav = document.querySelector('.main-nav');
 const contactForm = document.querySelector('#contact-form');
 const formStatus = document.querySelector('.form-status');
 
+function closeMenu() {
+  if (menuToggle && mainNav) {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    mainNav.classList.remove('is-open');
+    document.body.classList.remove('nav-open');
+  }
+}
+
+function openMenu() {
+  if (menuToggle && mainNav) {
+    menuToggle.setAttribute('aria-expanded', 'true');
+    mainNav.classList.add('is-open');
+    document.body.classList.add('nav-open');
+  }
+}
+
 if (menuToggle && mainNav) {
   menuToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     const isOpen = mainNav.classList.contains('is-open');
-    menuToggle.setAttribute('aria-expanded', String(!isOpen));
-    mainNav.classList.toggle('is-open', !isOpen);
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (mainNav.classList.contains('is-open') && !mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mainNav.classList.contains('is-open')) {
+      closeMenu();
+      menuToggle.focus();
+    }
   });
 }
 
 document.querySelectorAll('.main-nav a').forEach((link) => {
   link.addEventListener('click', () => {
-    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
-    if (mainNav) mainNav.classList.remove('is-open');
+    closeMenu();
   });
 });
+
 
 if (contactForm && formStatus) {
   contactForm.addEventListener('submit', (event) => {
