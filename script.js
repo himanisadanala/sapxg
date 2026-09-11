@@ -54,11 +54,51 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
 });
 
 
+// ✅ PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BELOW
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxL4yKMIO9Me92_FB_9l3se0TOM36w-B2yLa0_ufM00JbjZ5AokPuW4QWMbC_kp1hXYSQ/exec';
+
 if (contactForm && formStatus) {
-  contactForm.addEventListener('submit', (event) => {
+  contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
-    formStatus.textContent = 'Thank you. Your inquiry has been received.';
-    contactForm.reset();
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+
+    // Collect form data as JSON
+    const formData = {
+      name: contactForm.querySelector('[name="name"]').value,
+      email: contactForm.querySelector('[name="email"]').value,
+      phone: contactForm.querySelector('[name="phone"]').value,
+      service: contactForm.querySelector('[name="service"]').value,
+      message: contactForm.querySelector('[name="message"]').value,
+    };
+
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending… <span>⏳</span>';
+    formStatus.textContent = '';
+    formStatus.style.color = '';
+
+    try {
+      // Use text/plain (CORS-safelisted) with JSON body — Apps Script still parses it correctly
+      await fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(formData),
+      });
+
+      formStatus.textContent = '✅ Thank you! Your inquiry has been submitted successfully.';
+      formStatus.style.color = '#16804c';
+      contactForm.reset();
+    } catch (error) {
+      formStatus.textContent = '❌ Something went wrong. Please try again or email us directly.';
+      formStatus.style.color = '#dc2626';
+      console.error('Form submission error:', error);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
   });
 }
 
