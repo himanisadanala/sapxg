@@ -2,8 +2,6 @@
 .contact-details .corporate-heading{margin-bottom:0!important}
 .contact-details .corporate-heading + p{margin-top:-3px!important}
 .contact-details p:first-child{margin-bottom:0!important}
-.contact-details a[href^="tel"]::before{content:'📞';display:inline-block;margin-right:5px;font-size:15px;line-height:1}
-.contact-details a[href^="mailto"]::before{content:'📧';display:inline-block;margin-right:5px;font-size:15px;line-height:1}
 .contact-details p:first-child{text-transform:uppercase}
 :root{--yellow:#facc15;--yellow-soft:#fff8d8;--ink:#1e293b;--ink-2:#0f172a;--white:#fff;--grey:#f1f5f9;--muted:#64748b;--line:#dbe3ea;--blue:#1d5368}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--white);font:16px/1.55 'DM Sans',sans-serif}body.nav-open{overflow:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.site-header{height:82px;padding:0 clamp(22px,5vw,78px);display:flex;align-items:center;gap:30px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.95);position:sticky;top:0;z-index:10}.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}.bulb-logo{width:36px;height:43px;display:block}.bulb-logo svg{width:100%;height:100%}.brand-text{display:grid;line-height:1}.brand-text strong{font:700 22px/1 'Space Grotesk',sans-serif;letter-spacing:1px}.brand-text small{font-size:8px;letter-spacing:.55px;color:var(--muted);margin-top:5px}.main-nav{display:flex;justify-content:center;align-items:center;gap:clamp(15px,2.1vw,31px);margin-left:auto;font-size:13px;font-weight:600}.main-nav a{padding:29px 0;border-bottom:2px solid transparent}.main-nav a:hover{border-color:var(--yellow)}
 /* Floating WhatsApp Button */
