@@ -35,6 +35,9 @@ function doPost(e) {
     var hasBIBW = techString.includes('BI/BW') ? 'X' : '';
     var hasHANA = techString.includes('HANA') ? 'X' : '';
     
+    // Format timestamp in Indian Standard Time (IST / GMT+05:30) as DD/MM/YYYY HH:mm:ss
+    var formattedTimestamp = Utilities.formatDate(new Date(), "GMT+05:30", "dd/MM/yyyy HH:mm:ss");
+    
     sheet.appendRow([
       data.fullname || '',       // A: Name
       data.email || '',          // B: Email
@@ -43,7 +46,7 @@ function doPost(e) {
       data.relevantexp || '',    // E: Relevant Experience
       data.projects || '',       // F: Number of projects completed in relevant platform
       cvLink,                    // G: CV Upload (Google Drive link)
-      new Date(),                // H: Timestamp
+      formattedTimestamp,        // H: Timestamp (dd/MM/yyyy HH:mm:ss)
       hasSAC,                    // I: SAC
       hasDatasphere,             // J: DATASPHERE
       hasBIBW,                   // K: BI/BW
