@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="SAPXG Tech Private Limited — Latest insights, important updates, and company announcements." name="description"/>
+<title>SAC Planning Hands-on Program | SAPXG Tech Private Limited</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css?v=14" rel="stylesheet"/>
+<style>
+    .blog-page { min-height: 100vh; background: var(--white); }
+
+    /* Header */
+    .blog-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px clamp(22px,8vw,128px);
+      border-bottom: 1px solid var(--line);
+    }
+    .blog-header .full-logo { width: 180px; }
+    .blog-back {
+      font: 600 13px 'DM Sans', sans-serif;
+      color: var(--ink); border-bottom: 2px solid var(--yellow);
+      padding-bottom: 3px;
+    }
+    .blog-back:hover { color: var(--blue); }
+
+    /* Content */
+    .blog-content {
+      max-width: 780px; margin: 0 auto;
+      padding: clamp(40px,6vw,72px) clamp(22px,6vw,48px);
+    }
+
+    /* Title */
+    .blog-title-area { margin-bottom: 44px; border-bottom: 1px solid var(--line); padding-bottom: 32px; }
+    .blog-label {
+      display: flex; align-items: center; gap: 9px;
+      color: var(--muted); font: 700 11px 'Space Grotesk', sans-serif;
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .blog-label span {
+      width: 8px; height: 8px; background: var(--yellow); border-radius: 50%;
+    }
+    .blog-title-area h1 {
+      font: 600 clamp(28px,4vw,40px)/1.1 'Space Grotesk', sans-serif;
+      letter-spacing: -0.5px; margin: 0 0 12px; color: var(--ink);
+    }
+    .blog-subtitle {
+      color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0;
+    }
+
+    /* ===== Feed ===== */
+    .feed { list-style: none; margin: 0; padding: 0; }
+
+    .feed-item {
+      padding: 28px 0; border-bottom: 1px solid var(--line);
+      transition: background .2s;
+    }
+    .feed-item:first-child { padding-top: 0; }
+    .feed-item:hover { background: var(--grey); margin: 0 -20px; padding-left: 20px; padding-right: 20px; }
+
+    .feed-date {
+      font: 600 11px 'Space Grotesk', sans-serif;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 8px;
+    }
+    .feed-title {
+      font: 600 20px/1.3 'Space Grotesk', sans-serif;
+      color: var(--ink); margin: 0 0 8px;
+      transition: color .2s;
+    }
+    .feed-item:hover .feed-title { color: var(--blue); }
+    .feed-desc {
+      font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0;
+      max-width: 620px;
+    }
+    .feed-tag {
+      display: inline-block; margin-top: 10px;
+      padding: 3px 10px; font: 700 9px 'Space Grotesk', sans-serif;
+      letter-spacing: 1px; text-transform: uppercase;
+      background: var(--yellow-soft); color: var(--ink);
+      border-radius: 2px;
+    }
+
+    /* Footer */
+    .blog-footer {
+      margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line);
+      text-align: center; color: var(--muted); font-size: 12px;
+    }
+    .blog-footer a { color: var(--blue); font-weight: 600; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .blog-header { padding: 18px 22px; }
+      .blog-header .full-logo { width: 160px; }
+      .blog-title-area { margin-bottom: 32px; padding-bottom: 24px; }
+      .feed-title { font-size: 17px; }
+      .feed-desc { font-size: 13px; }
+      .feed-item { padding: 22px 0; }
+      .feed-item:hover { margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="blog-page">
+<header class="blog-header">
+<a aria-label="SAPXG home" href="index.html"><img alt="SAPXG - A Smart Analytics &amp; Planning Experts Group" class="full-logo" src="sapxg logo.png"/></a>
+<a class="blog-back" href="index.html">Back to Home <span aria-hidden="true">↗</span></a>
+</header>
+<main class="blog-content">
+<div class="blog-title-area">
+<div class="blog-label"><span></span> Latest</div>
+<h1>Updates &amp; Announcements</h1>
+<p class="blog-subtitle">Important content, company news, and key updates from SAPXG Tech.</p>
+</div>
+<ul class="feed" id="blog-feed"><li class="feed-item">
+<div class="feed-date">September 11, 2026</div>
+<h2 class="feed-title">SAC Planning Hands-on Program</h2>
+<div class="feed-desc">
+<p style="margin-bottom: 12px;">Refer to <span style="text-decoration: underline; font-weight: 600;">reaching Consultant-mode level in SAC</span> in our blog post <a href="https://sapxg.com/learning-career-on-sac/" rel="noopener" style="color: var(--blue); font-weight: 600;" target="_blank">Learning &amp; Career On SAP Analytics Cloud (SAC)</a></p>
+<p style="margin-bottom: 12px;">Our Trainings &amp; Programs are sequenced to reach to the respective levels.</p>
+<p style="margin-bottom: 12px;"><a href="index.html#training" style="color: var(--blue); font-weight: 600;">View Our Trainings and Programs</a></p>
+<img alt="Training sequence" src="https://media.licdn.com/dms/image/D4D2CAQH7J9TcYVPgfg/comment-image-shrink_8192_480/0/1721137620799?e=1721764800&amp;v=beta&amp;t=EXDpLbOp4R9icaXTLcPM2QkovCt9Gj-niw4SJKg096w" style="width: 100%; border-radius: 4px; margin-bottom: 16px; border: 1px solid var(--line);"/>
+<p style="margin-bottom: 12px;"><span style="background-color: var(--yellow-soft); padding: 2px 4px; border-radius: 2px; font-weight: 600; color: var(--ink);">Hands-on program</span> will contribute a lot to reach the Consultant-mode level.</p>
+<p style="margin-bottom: 12px;">Most of the learners have a hard time gaining real project experience until they get an opportunity in the project.</p>
+<p style="margin-bottom: 16px;">To give a real project experience through Hands-on program, we provide an end-to-end planning project hands-on experience on a <strong>Generic planning solution</strong> and part of <strong>FP&amp;A (Financial Planning and Analysis)</strong> covering all the planning features.</p>
+<h3 style="font: 600 16px 'Space Grotesk', sans-serif; margin-bottom: 8px; color: var(--ink);">AIM of Hands-ON Program:</h3>
+<p style="margin-bottom: 16px;">The aim of this program is to take you through SAC planning functionality and use this knowledge in meeting your project requirement.</p>
+<ul style="list-style-type: none; padding-left: 0; display: grid; gap: 12px; margin-bottom: 16px;">
+<li><strong>Generic Planning Hands-on experience:</strong> Participants come from different backgrounds, so a generic planning scenario (that can be understood by every participant, not specific to an area like Finance, Sales, Supply, HR etc) would be ideal to have a Hands-on. This program will upskill on how to build a custom planning solution irrespective of functional domain.</li>
+<li><strong>Financial Planning and Analysis (FP&amp;A):</strong> It is big and vast, hence we provide hands-on experience on a part of its process which will give a realistic business planning Hands-on experience for resources having FP&amp;A background.</li>
+</ul>
+<p style="margin-bottom: 12px;">Register at <a href="register.html" style="color: var(--blue); font-weight: 600;">Hands-on Program Registration link</a></p>
+<p style="margin-bottom: 16px;">Reach us on <a href="https://wa.me/917022278284" style="color: var(--blue); font-weight: 600;">WhatsApp Chat</a> for any further information.</p>
+<p style="margin-bottom: 0;"><strong>Note:</strong> For a Fresher in SAC, we recommend to take up Beginner and Advanced SAC course before taking up SAC Hands-on Program.</p>
+</div>
+<span class="feed-tag">Training</span>
+</li></ul>
+<div class="blog-footer">
+<p>Have questions? <a href="index.html#contact">Get in touch</a> with our team.</p>
+<p>© 2026 SAPXG Tech Private Limited</p>
+</div>
+</main>
+</div>
+
+</body>
+</html>
