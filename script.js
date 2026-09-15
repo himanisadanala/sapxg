@@ -1,6 +1,7 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav');
 const contactForm = document.querySelector('#contact-form');
+const careerForm = document.querySelector('#career-form');
 const formStatus = document.querySelector('.form-status');
 
 function closeMenu() {
@@ -56,6 +57,7 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
 
 // ✅ PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BELOW
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxL4yKMIO9Me92_FB_9l3se0TOM36w-B2yLa0_ufM00JbjZ5AokPuW4QWMbC_kp1hXYSQ/exec';
+const GOOGLE_SHEET_CAREER_URL = 'https://script.google.com/macros/s/AKfycbzVZ0sxXTy-vP9uRwus1x1FX_DRb65S2RVPoYMZUIXZyRT9toqDTZH8aioYfuJRlB0HDg/exec';
 
 if (contactForm && formStatus) {
   contactForm.addEventListener('submit', async (event) => {
@@ -94,6 +96,52 @@ if (contactForm && formStatus) {
     } catch (error) {
       formStatus.textContent = '❌ Something went wrong. Please try again or email us directly.';
       formStatus.style.color = '#dc2626';
+      console.error('Form submission error:', error);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
+  });
+}
+
+if (careerForm) {
+  careerForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const submitBtn = careerForm.querySelector('button[type="submit"]');
+    const statusMsg = careerForm.querySelector('.form-status');
+    const originalText = submitBtn.innerHTML;
+
+    // Collect form data as JSON
+    const formData = {
+      name: careerForm.querySelector('[name="name"]').value,
+      email: careerForm.querySelector('[name="email"]').value,
+      phone: careerForm.querySelector('[name="phone"]').value,
+      training_code: careerForm.querySelector('[name="training_code"]').value,
+      brief: careerForm.querySelector('[name="brief"]').value,
+    };
+
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending… <span>⏳</span>';
+    statusMsg.textContent = '';
+    statusMsg.style.color = '';
+
+    try {
+      // Use text/plain (CORS-safelisted) with JSON body
+      await fetch(GOOGLE_SHEET_CAREER_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(formData),
+      });
+
+      statusMsg.textContent = '✅ Thank you! Your application has been submitted successfully.';
+      statusMsg.style.color = '#16804c';
+      careerForm.reset();
+    } catch (error) {
+      statusMsg.textContent = '❌ Something went wrong. Please try again.';
+      statusMsg.style.color = '#dc2626';
       console.error('Form submission error:', error);
     } finally {
       submitBtn.disabled = false;

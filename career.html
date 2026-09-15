@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Careers at SAPXG Tech Private Limited. Join us to make smarter decisions with analytics, planning, consulting, training, and technology services.">
+  <title>Careers | SAPXG Tech Private Limited</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1.4">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    .career-header {
+      padding: clamp(60px, 8vw, 100px) clamp(22px, 8vw, 128px);
+      background: var(--ink);
+      color: var(--white);
+      text-align: center;
+    }
+    .career-header h1 {
+      font: 600 clamp(40px, 6vw, 68px)/1 'Space Grotesk', sans-serif;
+      margin: 0 0 20px;
+    }
+    .career-header h1 em {
+      color: var(--yellow);
+      font-style: normal;
+    }
+    .career-header p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .jobs-section {
+      padding: clamp(60px, 8vw, 100px) clamp(22px, 8vw, 128px);
+      background: var(--grey);
+    }
+    .job-list {
+      display: grid;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .job-card {
+      background: var(--white);
+      padding: 30px;
+      border: 1px solid transparent;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .job-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 6px 6px 0 var(--yellow);
+      border-color: var(--ink);
+    }
+    .job-card h3 {
+      font: 600 22px 'Space Grotesk', sans-serif;
+      margin: 0 0 10px;
+      color: var(--ink);
+    }
+    .job-card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0 0 20px;
+    }
+    .job-meta {
+      display: flex;
+      gap: 15px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 20px;
+    }
+    .job-meta span {
+      background: var(--yellow-soft);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="SAPXG home">
+      <img class="full-logo" src="sapxg logo.png" alt="SAPXG - A Smart Analytics & Planning Experts Group">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html#home">Home</a><a href="index.html#why-us">About Us</a><a href="index.html#services">Domain &amp; Services</a><a href="blogs.html">Blogs</a><a href="index.html#training">Training Schedule</a><a href="index.html#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="journey-section" style="padding: clamp(60px, 8vw, 100px) clamp(22px, 8vw, 128px); background: var(--ink);">
+      <div style="max-width: 1000px; margin: 0 auto;">
+        <h2 style="font: 700 clamp(36px, 6vw, 52px)/1.1 'Space Grotesk', sans-serif; margin-bottom: 24px; color: var(--white); letter-spacing: -1px;">Begin The Journey With / <br>Through Us</h2>
+        <p style="font-size: 18px; line-height: 1.6; color: #cbd5e1; margin-bottom: 24px;">Our group of seasoned experts, having sound experience in respective domains, ensure a long-lasting relationship with Global Customers fulfilling Customer's Business needs.</p>
+        <p style="font-size: 18px; line-height: 1.6; color: #cbd5e1; margin-bottom: 32px;">These experts bring to our notice both the domain skills required and job positions available in Customer projects and that makes us bridge your career journey.</p>
+
+      </div>
+    </section>
+    
+    <section class="content-section" style="background: var(--white); padding: clamp(40px, 6vw, 80px) clamp(22px, 8vw, 128px); max-width: 1000px; margin: 0 auto;">
+      <h3 style="font: 700 28px/1.2 'Space Grotesk', sans-serif; margin-bottom: 30px; color: var(--ink);">Upload your CV</h3>
+      <form class="register-form" id="register-form">
+        <label>Name
+          <input type="text" name="fullname" placeholder="Your full name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="you@company.com" required>
+        </label>
+        <label>Contact Number
+          <input type="tel" name="phone" placeholder="+91" required>
+        </label>
+        <label>Total Experience
+          <input type="text" name="totalexp" placeholder="e.g. 5 years" required>
+        </label>
+        <label>Relevant Experience
+          <input type="text" name="relevantexp" placeholder="e.g. 3 years in SAP" required>
+        </label>
+        <label class="full-width">Number of projects completed in relevant platform
+          <input type="text" name="projects" placeholder="e.g. 4 projects" required>
+        </label>
+        <label class="full-width">Upload CV / Resume
+          <div class="file-upload-area" id="file-upload-area">
+            <input type="file" name="resume" accept=".pdf,.doc,.docx" id="resume-input">
+            <div class="file-upload-icon">📄</div>
+            <p class="file-upload-text">Click or drag to upload your CV</p>
+            <p class="file-upload-hint">PDF, DOC, or DOCX — Max 5MB</p>
+            <p class="file-name" id="file-name"></p>
+          </div>
+        </label>
+        <div class="full-width" style="display: grid; gap: 6px; font: 700 10px 'Space Grotesk', sans-serif; text-transform: uppercase; letter-spacing: 1.2px; color: var(--ink);">
+          Technologies / Platforms
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="technologies" value="SAC"> SAC</label>
+            <label><input type="checkbox" name="technologies" value="DATASPHERE"> DATASPHERE</label>
+            <label><input type="checkbox" name="technologies" value="BI/BW"> BI/BW</label>
+            <label><input type="checkbox" name="technologies" value="HANA"> HANA</label>
+          </div>
+        </div>
+        <div class="submit-row">
+          <button class="register-btn" type="submit">Submit Registration <span>↗</span></button>
+          <p class="register-status" id="register-status" role="status"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <a class="brand" href="index.html">
+        <img class="full-logo footer-logo" src="sapxg logo.png" alt="SAPXG - A Smart Analytics & Planning Experts Group">
+      </a>
+      <p>Exceed expectations. Plan smarter.</p>
+    </div>
+    <span class="copyright">© 2026 SAPXG Tech Private Limited</span>
+  </footer>
+  <script src="script.js?v=5"></script>
+
+  <a href="https://wa.me/917022278284" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" style="width:24px; height:24px;"><path d="M17.47 14.38c-.29-.15-1.73-.85-2-.95s-.46-.15-.66.15-.76.95-.93 1.14-.34.22-.64.07a8.07 8.07 0 01-2.38-1.47 8.94 8.94 0 01-1.65-2.05c-.17-.29 0-.45.13-.6s.29-.34.44-.51.2-.29.29-.48a.53.53 0 000-.51c-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51h-.56a1.07 1.07 0 00-.78.37A3.28 3.28 0 006.14 9.5a5.69 5.69 0 001.2 3.02 13.05 13.05 0 005.01 4.43 16.56 16.56 0 001.67.62 4.03 4.03 0 001.84.12 3.02 3.02 0 001.98-1.4 2.44 2.44 0 00.17-1.4c-.07-.12-.27-.19-.56-.34m-5.42 7.41A9.88 9.88 0 017 20.14l-.36-.21-3.73.98.99-3.64-.24-.37a9.88 9.88 0 01-1.51-5.26A9.87 9.87 0 0112.05 1.8 9.82 9.82 0 0119 4.69a9.82 9.82 0 012.87 6.96 9.87 9.87 0 01-9.87 9.87l.05.27zm8.41-18.24A11.81 11.81 0 0012.05 0 11.84 11.84 0 002.05 17.76L0 24l6.39-1.68A11.83 11.83 0 0012.05 24a11.84 11.84 0 0011.84-11.84 11.76 11.76 0 00-3.43-8.61z"/></svg>
+    <span>How can I help you?</span>
+  </a>
+
+<script>
+    // Show selected file name
+    const resumeInput = document.getElementById('resume-input');
+    const fileName = document.getElementById('file-name');
+    resumeInput.addEventListener('change', () => {
+      if (resumeInput.files.length > 0) {
+        fileName.textContent = '✅ ' + resumeInput.files[0].name;
+        fileName.classList.add('visible');
+      } else {
+        fileName.classList.remove('visible');
+      }
+    });
+
+    // Pre-select course from URL parameter
+    const params = new URLSearchParams(window.location.search);
+    const course = params.get('course');
+    if (course) {
+      const courseDisplay = document.getElementById('selected-course');
+      courseDisplay.textContent = '📋 ' + course;
+      const select = document.getElementById('program-select');
+      for (let opt of select.options) {
+        if (opt.value === course) { opt.selected = true; break; }
+      }
+    }
+
+    // Form submission — connected to Google Sheets + CV upload to Drive
+    const REGISTER_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyzZ1y0TqBU66BJ2jrtrocjTgBtqVBd3WVbdVHc4HF7Y1uGQs14Nr3Z5xbw2W7vxYjVnQ/exec';
+    const form = document.getElementById('register-form');
+    const status = document.getElementById('register-status');
+
+    // Convert file to base64
+    function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const base64 = reader.result.split(',')[1]; // remove data:...;base64, prefix
+          resolve(base64);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.register-btn');
+      const originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = 'Uploadingâ€¦ â³';
+
+      const payload = {
+        fullname: form.fullname.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        totalexp: form.totalexp.value,
+        relevantexp: form.relevantexp.value,
+        projects: form.projects.value,
+        technologies: Array.from(form.querySelectorAll('input[name="technologies"]:checked')).map(cb => cb.value).join(', '),
+        fileData: '',
+        fileName: '',
+        fileType: ''
+      };
+
+      // Read CV file if uploaded
+      const fileInput = document.getElementById('resume-input');
+      if (fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        if (file.size > 5 * 1024 * 1024) {
+          status.textContent = 'âŒ File too large. Max 5MB.';
+          status.style.color = '#dc2626';
+          btn.disabled = false;
+          btn.innerHTML = originalText;
+          return;
+        }
+        btn.innerHTML = 'Uploading CVâ€¦ â³';
+        payload.fileData = await fileToBase64(file);
+        payload.fileName = file.name;
+        payload.fileType = file.type;
+      }
+
+      try {
+        await fetch(REGISTER_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify(payload)
+        });
+        status.textContent = '✅ Registration submitted! We will contact you soon.';
+        status.style.color = '#16804c';
+        form.reset();
+        fileName.classList.remove('visible');
+        document.getElementById('selected-course').textContent = '';
+      } catch (err) {
+        status.textContent = 'âŒ Something went wrong. Please try again.';
+        status.style.color = '#dc2626';
+      }
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+    });
+  </script>
+</body>
+</html>
