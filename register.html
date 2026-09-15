@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -139,12 +139,14 @@
       .submit-row { flex-direction: column; align-items: stretch !important; }
     }
   </style>
+
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
   <div class="register-page">
     <header class="register-header">
       <a href="index.html" aria-label="SAPXG home"><img class="full-logo" src="sapxg logo.png" alt="SAPXG - A Smart Analytics & Planning Experts Group"></a>
-      <a class="register-back" href="index.html#training">← Back to Training</a>
+      <a class="register-back" href="index.html#training">â† Back to Training</a>
     </header>
 
     <main class="register-content">
@@ -177,7 +179,7 @@
         <label class="full-width">Upload CV / Resume
           <div class="file-upload-area" id="file-upload-area">
             <input type="file" name="resume" accept=".pdf,.doc,.docx" id="resume-input">
-            <div class="file-upload-icon">📄</div>
+            <div class="file-upload-icon">ðŸ“„</div>
             <p class="file-upload-text">Click or drag to upload your CV</p>
             <p class="file-upload-hint">PDF, DOC, or DOCX — Max 5MB</p>
             <p class="file-name" id="file-name"></p>
@@ -218,7 +220,7 @@
     const course = params.get('course');
     if (course) {
       const courseDisplay = document.getElementById('selected-course');
-      courseDisplay.textContent = '📋 ' + course;
+      courseDisplay.textContent = 'ðŸ“‹ ' + course;
       const select = document.getElementById('program-select');
       for (let opt of select.options) {
         if (opt.value === course) { opt.selected = true; break; }
@@ -248,7 +250,7 @@
       const btn = form.querySelector('.register-btn');
       const originalText = btn.innerHTML;
       btn.disabled = true;
-      btn.innerHTML = 'Uploading… ⏳';
+      btn.innerHTML = 'Uploadingâ€¦ â³';
 
       const payload = {
         fullname: form.fullname.value,
@@ -268,13 +270,13 @@
       if (fileInput.files.length > 0) {
         const file = fileInput.files[0];
         if (file.size > 5 * 1024 * 1024) {
-          status.textContent = '❌ File too large. Max 5MB.';
+          status.textContent = 'âŒ File too large. Max 5MB.';
           status.style.color = '#dc2626';
           btn.disabled = false;
           btn.innerHTML = originalText;
           return;
         }
-        btn.innerHTML = 'Uploading CV… ⏳';
+        btn.innerHTML = 'Uploading CVâ€¦ â³';
         payload.fileData = await fileToBase64(file);
         payload.fileName = file.name;
         payload.fileType = file.type;
@@ -293,7 +295,7 @@
         fileName.classList.remove('visible');
         document.getElementById('selected-course').textContent = '';
       } catch (err) {
-        status.textContent = '❌ Something went wrong. Please try again.';
+        status.textContent = 'âŒ Something went wrong. Please try again.';
         status.style.color = '#dc2626';
       }
       btn.disabled = false;
