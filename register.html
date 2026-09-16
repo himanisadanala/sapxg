@@ -166,10 +166,28 @@
           <input type="email" name="email" placeholder="you@email.com" required>
         </label>
         <label>Contact Number
-          <input type="tel" name="phone" placeholder="Your contact number" required>
+          <div style="display: flex; gap: 8px;">
+            <select name="country_code" style="width: 100px; flex-shrink: 0;" required>
+              <option value="+1">+1 (US)</option>
+              <option value="+44">+44 (UK)</option>
+              <option value="+91" selected>+91 (IN)</option>
+              <option value="+61">+61 (AU)</option>
+              <option value="+49">+49 (DE)</option>
+            </select>
+            <input type="tel" name="phone" placeholder="Your contact number" required style="flex-grow: 1;">
+          </div>
         </label>
         <label>Training Code
-          <input type="text" name="training_code" placeholder="Enter training code" required>
+          <select name="training_code" required>
+            <option value="" disabled selected hidden>Enter training code</option>
+            <option value="BDCS_LO_2610 - SAP Business Data Cloud Core Skills (BDC) - Online">BDCS_LO_2610 - SAP Business Data Cloud Core Skills (BDC) - Online</option>
+            <option value="BWDC_LO_2610 - SAP BW Modernization and SAP Business Data Cloud (BW Data Cloud)- Online">BWDC_LO_2610 - SAP BW Modernization and SAP Business Data Cloud (BW Data Cloud)- Online</option>
+            <option value="DTSP_CO_2610 - SAP Datasphere Core Skills (Datasphere) - Corporate">DTSP_CO_2610 - SAP Datasphere Core Skills (Datasphere) - Corporate</option>
+            <option value="SACB_LO_2610 - SAP Analytics Cloud BI Core Skills (Analytics / BI) - Online">SACB_LO_2610 - SAP Analytics Cloud BI Core Skills (Analytics / BI) - Online</option>
+            <option value="SACP_CO_2610 - SAP Analytics Cloud Planning Core Skills (SAC Planning / Analytics) - Corporate">SACP_CO_2610 - SAP Analytics Cloud Planning Core Skills (SAC Planning / Analytics) - Corporate</option>
+            <option value="HANA_LO_2610 - SAP HANA (HANA) - Online">HANA_LO_2610 - SAP HANA (HANA) - Online</option>
+            <option value="HOCS_LO_2610 - SAP HANA Cloud (HANA Cloud) - Online">HOCS_LO_2610 - SAP HANA Cloud (HANA Cloud) - Online</option>
+          </select>
         </label>
         <label style="grid-column: 1 / -1;">Brief on why you want to take this training
           <textarea name="brief" rows="4" placeholder="Tell us why you're interested..." required></textarea>

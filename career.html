@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -112,7 +112,16 @@
           <input type="email" name="email" placeholder="you@company.com" required>
         </label>
         <label>Contact Number
-          <input type="tel" name="phone" placeholder="+91" required>
+          <div style="display: flex; gap: 8px;">
+            <select name="country_code" style="width: 100px; flex-shrink: 0;" required>
+              <option value="+1">+1 (US)</option>
+              <option value="+44">+44 (UK)</option>
+              <option value="+91" selected>+91 (IN)</option>
+              <option value="+61">+61 (AU)</option>
+              <option value="+49">+49 (DE)</option>
+            </select>
+            <input type="tel" name="phone" placeholder="Contact number" required style="flex-grow: 1;">
+          </div>
         </label>
         <label>Total Experience
           <input type="text" name="totalexp" placeholder="e.g. 5 years" required>
