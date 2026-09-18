@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Credits — Meet the team behind the SAPXG Tech website." name="description"/>
+  <title>Credits | SAPXG Tech Private Limited</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="styles.css?v=1.3" rel="stylesheet"/>
+  <style>
+    /* Header */
+    .blog-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px clamp(22px,8vw,128px);
+      border-bottom: 1px solid var(--line);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: var(--white);
+      box-sizing: border-box;
+    }
+    .blog-page { min-height: 100vh; background: var(--white); padding-top: 80px; }
+
+    .blog-header .full-logo { width: 180px; }
+    .blog-back {
+      font: 600 13px 'DM Sans', sans-serif;
+      color: var(--ink); border-bottom: 2px solid var(--yellow);
+      padding-bottom: 3px;
+    }
+    .blog-back:hover { color: var(--blue); }
+
+    /* Content */
+    .blog-content {
+      max-width: 780px; margin: 0 auto;
+      padding: clamp(40px,6vw,72px) clamp(22px,6vw,48px);
+    }
+
+    /* Title */
+    .blog-title-area { margin-bottom: 44px; border-bottom: 1px solid var(--line); padding-bottom: 32px; }
+    .blog-label {
+      display: flex; align-items: center; gap: 9px;
+      color: var(--muted); font: 700 11px 'Space Grotesk', sans-serif;
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .blog-label span {
+      width: 8px; height: 8px; background: var(--yellow); border-radius: 50%;
+    }
+    .blog-title-area h1 {
+      font: 600 clamp(28px,4vw,40px)/1.1 'Space Grotesk', sans-serif;
+      letter-spacing: -0.5px; margin: 0 0 12px; color: var(--ink);
+    }
+    .blog-subtitle {
+      color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0;
+    }
+
+    /* ===== Credits Grid ===== */
+    .credits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 8px;
+    }
+
+    .credit-card {
+      background: var(--grey, #f8f8f8);
+      border: 1px solid var(--line, #e8e8e8);
+      border-radius: 10px;
+      padding: 28px 24px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .credit-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.06);
+    }
+
+    .credit-card .credit-role {
+      font: 700 10px 'Space Grotesk', sans-serif;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--blue, #2563eb);
+      margin-bottom: 10px;
+    }
+    .credit-card .credit-name {
+      font: 600 20px/1.3 'Space Grotesk', sans-serif;
+      color: var(--ink);
+      margin: 0 0 8px;
+    }
+    .credit-card .credit-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* Section headings within credits */
+    .credits-section-title {
+      font: 600 22px/1.3 'Space Grotesk', sans-serif;
+      color: var(--ink);
+      margin: 48px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--yellow, #ffd000);
+      display: inline-block;
+    }
+    .credits-section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    .credits-note {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    /* Footer */
+    .blog-footer {
+      margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line);
+      text-align: center; color: var(--muted); font-size: 12px;
+    }
+    .blog-footer a { color: var(--blue); font-weight: 600; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .blog-header { padding: 18px 22px; }
+      .blog-header .full-logo { width: 160px; }
+      .blog-title-area { margin-bottom: 32px; padding-bottom: 24px; }
+      .credits-grid { grid-template-columns: 1fr; gap: 18px; }
+      .credit-card { padding: 22px 18px; }
+    }
+  </style>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+<div class="blog-page">
+<header class="blog-header">
+<a aria-label="SAPXG home" href="index.html"><img alt="SAPXG - A Smart Analytics &amp; Planning Experts Group" class="full-logo" src="sapxg logo.png"/></a>
+<a class="blog-back" href="index.html">&larr; Back to Home</a>
+</header>
+<main class="blog-content">
+<div class="blog-title-area">
+<div class="blog-label"><span></span> Acknowledgements</div>
+<h1>Credits</h1>
+<p class="blog-subtitle">Meet the talented people who designed, developed, and brought the SAPXG Tech website to life.</p>
+</div>
+
+<h3 class="credits-section-title">Development &amp; Design Team</h3>
+<div class="credits-grid">
+  <div class="credit-card">
+    <div class="credit-role">Lead Developer</div>
+    <p class="credit-name">Your Name Here</p>
+    <p class="credit-desc">Full-stack development, architecture, and deployment of the SAPXG website.</p>
+  </div>
+  <div class="credit-card">
+    <div class="credit-role">UI / UX Designer</div>
+    <p class="credit-name">Your Name Here</p>
+    <p class="credit-desc">Visual design, user experience, and responsive layout across all pages.</p>
+  </div>
+  <div class="credit-card">
+    <div class="credit-role">Content &amp; Strategy</div>
+    <p class="credit-name">Your Name Here</p>
+    <p class="credit-desc">Content creation, copywriting, and SEO strategy for the website.</p>
+  </div>
+  <div class="credit-card">
+    <div class="credit-role">Project Lead</div>
+    <p class="credit-name">Your Name Here</p>
+    <p class="credit-desc">Project management, vision, and overall coordination of the website launch.</p>
+  </div>
+</div>
+
+<h3 class="credits-section-title">Special Thanks</h3>
+<div class="credits-grid">
+  <div class="credit-card">
+    <div class="credit-role">SAPXG Tech Team</div>
+    <p class="credit-name">The Entire SAPXG Family</p>
+    <p class="credit-desc">For their continuous support, feedback, and dedication to making this platform a success.</p>
+  </div>
+</div>
+
+<p class="credits-note">
+  This website is proudly built and maintained by <strong>SAPXG Tech Private Limited</strong>. 
+  If you have any questions or feedback about the website, feel free to <a href="index.html#contact" style="color: var(--blue); font-weight: 600;">contact us</a>.
+</p>
+
+<div class="blog-footer">
+<p>Have questions? <a href="index.html#contact">Get in touch</a> with our team.</p>
+<p>&copy; 2026 SAPXG Tech Private Limited</p>
+</div>
+</main>
+</div>
+
+
+<a href="https://wa.me/917022278284" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" width="24" height="24" style="width:24px; height:24px;"><path d="M17.47 14.38c-.29-.15-1.73-.85-2-.95s-.46-.15-.66.15-.76.95-.93 1.14-.34.22-.64.07a8.07 8.07 0 01-2.38-1.47 8.94 8.94 0 01-1.65-2.05c-.17-.29 0-.45.13-.6s.29-.34.44-.51.2-.29.29-.48a.53.53 0 000-.51c-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51h-.56a1.07 1.07 0 00-.78.37A3.28 3.28 0 006.14 9.5a5.69 5.69 0 001.2 3.02 13.05 13.05 0 005.01 4.43 16.56 16.56 0 001.67.62 4.03 4.03 0 001.84.12 3.02 3.02 0 001.98-1.4 2.44 2.44 0 00.17-1.4c-.07-.12-.27-.19-.56-.34m-5.42 7.41A9.88 9.88 0 017 20.14l-.36-.21-3.73.98.99-3.64-.24-.37a9.88 9.88 0 01-1.51-5.26A9.87 9.87 0 0112.05 1.8 9.82 9.82 0 0119 4.69a9.82 9.82 0 012.87 6.96 9.87 9.87 0 01-9.87 9.87l.05.27zm8.41-18.24A11.81 11.81 0 0012.05 0 11.84 11.84 0 002.05 17.76L0 24l6.39-1.68A11.83 11.83 0 0012.05 24a11.84 11.84 0 0011.84-11.84 11.76 11.76 0 00-3.43-8.61z"/></svg>
+  <span>How can I help you?</span>
+</a>
+</body>
+
+</html>
