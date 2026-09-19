@@ -1,149 +1,251 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="SAPXG Tech Private Limited � Latest insights, important updates, and company announcements." name="description"/>
-<title>Check Out Our YouTube Playlist | SAPXG Tech Private Limited</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css?v=2.0" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="SAPXG Tech Private Limited — Latest insights, important updates, and company announcements."
+    name="description" />
+  <title>Check Out Our YouTube Playlist | SAPXG Tech Private Limited</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="styles.css?v=1.3" rel="stylesheet" />
+  <style>
+    .blog-page {
+      min-height: 100vh;
+      background: var(--white);
+    }
+
     /* Header */
     .blog-header {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 24px clamp(22px,8vw,128px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px clamp(22px, 8vw, 128px);
       border-bottom: 1px solid var(--line);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: var(--white);
-      box-sizing: border-box;
     }
-    .blog-page { min-height: 100vh; background: var(--white); padding-top: 80px; }
 
-    .blog-header .full-logo { width: 180px; }
+    .blog-header .full-logo {
+      width: 180px;
+    }
+
     .blog-back {
       font: 600 13px 'DM Sans', sans-serif;
-      color: var(--ink); border-bottom: 2px solid var(--yellow);
+      color: var(--ink);
+      border-bottom: 2px solid var(--yellow);
       padding-bottom: 3px;
     }
-    .blog-back:hover { color: var(--blue); }
+
+    .blog-back:hover {
+      color: var(--blue);
+    }
 
     /* Content */
     .blog-content {
-      max-width: 780px; margin: 0 auto;
-      padding: clamp(40px,6vw,72px) clamp(22px,6vw,48px);
+      max-width: 780px;
+      margin: 0 auto;
+      padding: clamp(40px, 6vw, 72px) clamp(22px, 6vw, 48px);
     }
 
     /* Title */
-    .blog-title-area { margin-bottom: 44px; border-bottom: 1px solid var(--line); padding-bottom: 32px; }
+    .blog-title-area {
+      margin-bottom: 44px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 32px;
+    }
+
     .blog-label {
-      display: flex; align-items: center; gap: 9px;
-      color: var(--muted); font: 700 11px 'Space Grotesk', sans-serif;
-      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--muted);
+      font: 700 11px 'Space Grotesk', sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
     }
+
     .blog-label span {
-      width: 8px; height: 8px; background: var(--yellow); border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      background: var(--yellow);
+      border-radius: 50%;
     }
+
     .blog-title-area h1 {
-      font: 600 clamp(28px,4vw,40px)/1.1 'Space Grotesk', sans-serif;
-      letter-spacing: -0.5px; margin: 0 0 12px; color: var(--ink);
+      font: 600 clamp(28px, 4vw, 40px)/1.1 'Space Grotesk', sans-serif;
+      letter-spacing: -0.5px;
+      margin: 0 0 12px;
+      color: var(--ink);
     }
+
     .blog-subtitle {
-      color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
     }
 
     /* ===== Feed ===== */
-    .feed { list-style: none; margin: 0; padding: 0; }
+    .feed {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
     .feed-item {
-      padding: 28px 0; border-bottom: 1px solid var(--line);
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
       transition: background .2s;
     }
-    .feed-item:first-child { padding-top: 0; }
-    .feed-item:hover { background: var(--grey); margin: 0 -20px; padding-left: 20px; padding-right: 20px; }
+
+    .feed-item:first-child {
+      padding-top: 0;
+    }
+
+    .feed-item:hover {
+      background: var(--grey);
+      margin: 0 -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
     .feed-date {
       font: 600 11px 'Space Grotesk', sans-serif;
-      letter-spacing: 1px; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 8px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
     }
+
     .feed-title {
       font: 600 20px/1.3 'Space Grotesk', sans-serif;
-      color: red; margin: 0 0 8px;
+      color: var(--ink);
+      margin: 0 0 8px;
       transition: color .2s;
     }
-    .feed-item:hover .feed-title { color: var(--blue); }
+
+    .feed-item:hover .feed-title {
+      color: var(--blue);
+    }
+
     .feed-desc {
-      font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
       max-width: 620px;
     }
+
     .feed-tag {
-      display: inline-block; margin-top: 10px;
-      padding: 3px 10px; font: 700 9px 'Space Grotesk', sans-serif;
-      letter-spacing: 1px; text-transform: uppercase;
-      background: var(--yellow-soft); color: var(--ink);
+      display: inline-block;
+      margin-top: 10px;
+      padding: 3px 10px;
+      font: 700 9px 'Space Grotesk', sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: var(--yellow-soft);
+      color: var(--ink);
       border-radius: 2px;
     }
 
     /* Footer */
     .blog-footer {
-      margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line);
-      text-align: center; color: var(--muted); font-size: 12px;
+      margin-top: 48px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
     }
-    .blog-footer a { color: var(--blue); font-weight: 600; }
+
+    .blog-footer a {
+      color: var(--blue);
+      font-weight: 600;
+    }
 
     /* Responsive */
     @media (max-width: 600px) {
-      .blog-header { padding: 18px 22px; }
-      .blog-header .full-logo { width: 160px; }
-      .blog-title-area { margin-bottom: 32px; padding-bottom: 24px; }
-      .feed-title { font-size: 17px; }
-      .feed-desc { font-size: 13px; }
-      .feed-item { padding: 22px 0; }
-      .feed-item:hover { margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+      .blog-header {
+        padding: 18px 22px;
+      }
+
+      .blog-header .full-logo {
+        width: 160px;
+      }
+
+      .blog-title-area {
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+      }
+
+      .feed-title {
+        font-size: 17px;
+      }
+
+      .feed-desc {
+        font-size: 13px;
+      }
+
+      .feed-item {
+        padding: 22px 0;
+      }
+
+      .feed-item:hover {
+        margin: 0 -16px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
     }
   </style>
-
-  <link rel="icon" type="image/png" href="favicon.png">
 </head>
+
 <body>
-<div class="blog-page">
-<header class="blog-header">
-<a aria-label="SAPXG home" href="index.html"><img alt="SAPXG - A Smart Analytics &amp; Planning Experts Group" class="full-logo" src="sapxg logo.png"/></a>
-<a class="blog-back" href="blogs.html">All Blog Posts <span aria-hidden="true">?</span></a>
-</header>
-<main class="blog-content">
-<div class="blog-title-area">
-<div class="blog-label"><span></span> Latest</div>
-<h1>Updates &amp; Announcements</h1>
-<p class="blog-subtitle">Important content, company news, and key updates from SAPXG Tech.</p>
-</div>
-<ul class="feed" id="blog-feed"><li class="feed-item">
-<div class="feed-date">September 11, 2026</div>
-<h2 class="feed-title">Check Out Our YouTube Playlist</h2>
-<div class="feed-desc">
-<p style="margin-bottom: 0;">Visit our <a href="https://www.youtube.com/playlist?list=PL0XoBaDOu51htv49xOm9cOwoCYTswvvtg" rel="noopener" style="color: var(--blue); font-weight: 600;" target="_blank">YouTube SAC Playlist</a> for more learning materials and tutorials.</p>
-</div>
-<span class="feed-tag">Resource</span>
-</li></ul>
-<div class="blog-footer">
-<p>Have questions? <a href="index.html#contact">Get in touch</a> with our team.</p>
-<p>&copy; 2026 SAPXG Tech Private Limited</p>
-</div>
-</main>
-</div>
+  <div class="blog-page">
+    <header class="blog-header">
+      <a aria-label="SAPXG home" href="index.html"><img alt="SAPXG - A Smart Analytics &amp; Planning Experts Group"
+          class="full-logo" src="sapxg logo.png" /></a>
+      <a class="blog-back" href="blogs.html">All Blog Posts <span aria-hidden="true">↗</span></a>
+    </header>
+    <main class="blog-content">
+      <div class="blog-title-area">
+        <div class="blog-label"><span></span> Latest</div>
+        <h1>Updates &amp; Announcements</h1>
+        <p class="blog-subtitle">Important content, company news, and key updates from SAPXG Tech.</p>
+      </div>
+      <ul class="feed" id="blog-feed">
+        <li class="feed-item">
+          <div class="feed-date">September 11, 2026</div>
+          <h2 class="feed-title">Check Out Our YouTube Playlist</h2>
+          <div class="feed-desc">
+            <p style="margin-bottom: 0;">Visit our <a
+                href="https://www.youtube.com/playlist?list=PL0XoBaDOu51htv49xOm9cOwoCYTswvvtg" rel="noopener"
+                style="color: var(--blue); font-weight: 600;" target="_blank">YouTube SAC Playlist</a> for more learning
+              materials and tutorials.</p>
+          </div>
+          <span class="feed-tag">Resource</span>
+        </li>
+      </ul>
+      <div class="blog-footer">
+        <p>Have questions? <a href="index.html#contact">Get in touch</a> with our team.</p>
+        <p>© 2026 SAPXG Tech Private Limited</p>
+      </div>
+    </main>
+  </div>
 
 
-<a href="https://wa.me/917022278284" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" width="24" height="24" style="width:24px; height:24px;"><path d="M17.47 14.38c-.29-.15-1.73-.85-2-.95s-.46-.15-.66.15-.76.95-.93 1.14-.34.22-.64.07a8.07 8.07 0 01-2.38-1.47 8.94 8.94 0 01-1.65-2.05c-.17-.29 0-.45.13-.6s.29-.34.44-.51.2-.29.29-.48a.53.53 0 000-.51c-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51h-.56a1.07 1.07 0 00-.78.37A3.28 3.28 0 006.14 9.5a5.69 5.69 0 001.2 3.02 13.05 13.05 0 005.01 4.43 16.56 16.56 0 001.67.62 4.03 4.03 0 001.84.12 3.02 3.02 0 001.98-1.4 2.44 2.44 0 00.17-1.4c-.07-.12-.27-.19-.56-.34m-5.42 7.41A9.88 9.88 0 017 20.14l-.36-.21-3.73.98.99-3.64-.24-.37a9.88 9.88 0 01-1.51-5.26A9.87 9.87 0 0112.05 1.8 9.82 9.82 0 0119 4.69a9.82 9.82 0 012.87 6.96 9.87 9.87 0 01-9.87 9.87l.05.27zm8.41-18.24A11.81 11.81 0 0012.05 0 11.84 11.84 0 002.05 17.76L0 24l6.39-1.68A11.83 11.83 0 0012.05 24a11.84 11.84 0 0011.84-11.84 11.76 11.76 0 00-3.43-8.61z"/></svg>
-  <span>How can I help you?</span>
-</a>
+  <a href="https://wa.me/917022278284" target="_blank" rel="noopener" class="floating-whatsapp"
+    aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" style="width:24px; height:24px;">
+      <path
+        d="M17.47 14.38c-.29-.15-1.73-.85-2-.95s-.46-.15-.66.15-.76.95-.93 1.14-.34.22-.64.07a8.07 8.07 0 01-2.38-1.47 8.94 8.94 0 01-1.65-2.05c-.17-.29 0-.45.13-.6s.29-.34.44-.51.2-.29.29-.48a.53.53 0 000-.51c-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51h-.56a1.07 1.07 0 00-.78.37A3.28 3.28 0 006.14 9.5a5.69 5.69 0 001.2 3.02 13.05 13.05 0 005.01 4.43 16.56 16.56 0 001.67.62 4.03 4.03 0 001.84.12 3.02 3.02 0 001.98-1.4 2.44 2.44 0 00.17-1.4c-.07-.12-.27-.19-.56-.34m-5.42 7.41A9.88 9.88 0 017 20.14l-.36-.21-3.73.98.99-3.64-.24-.37a9.88 9.88 0 01-1.51-5.26A9.87 9.87 0 0112.05 1.8 9.82 9.82 0 0119 4.69a9.82 9.82 0 012.87 6.96 9.87 9.87 0 01-9.87 9.87l.05.27zm8.41-18.24A11.81 11.81 0 0012.05 0 11.84 11.84 0 002.05 17.76L0 24l6.39-1.68A11.83 11.83 0 0012.05 24a11.84 11.84 0 0011.84-11.84 11.76 11.76 0 00-3.43-8.61z" />
+    </svg>
+    <span>How can I help you?</span>
+  </a>
 </body>
 
 </html>
