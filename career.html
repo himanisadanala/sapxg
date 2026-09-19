@@ -8,13 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2.0">
+  <link rel="stylesheet" href="styles.css?v=10.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
     .career-header {
       padding: clamp(60px, 8vw, 100px) clamp(22px, 8vw, 128px);
-      background: var(--ink);
-      color: var(--white);
+      background: var(--white);
+      color: var(--ink);
       text-align: center;
     }
     .career-header h1 {
@@ -42,7 +43,7 @@
       margin: 0 auto;
     }
     .job-card {
-      background: var(--white);
+      background: var(--card); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px;
       padding: 30px;
       border: 1px solid transparent;
       transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
@@ -75,6 +76,52 @@
       padding: 4px 8px;
       border-radius: 4px;
     }
+  
+    .coverflow-section {
+      padding: clamp(60px, 8vw, 100px) 0;
+      background: var(--white);
+      overflow: hidden;
+    }
+    .coverflow-swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: min(80vw, 400px);
+    }
+    .coverflow-item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      background: rgba(26, 26, 36, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 32px;
+      text-align: left;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      margin: 0;
+      height: 100%;
+    }
+    .coverflow-item blockquote {
+      font-size: 18px;
+      color: var(--white);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .coverflow-item figcaption {
+      font-size: 14px;
+      color: #F59E0B;
+      margin-top: auto;
+      font-weight: 600;
+    }
+    .swiper-pagination-bullet {
+      background: #F59E0B !important;
+    }
+
   </style>
 </head>
 <body>
@@ -99,6 +146,47 @@
         <div>
           <img src="career_support.jpg" alt="Career support professional" style="width: 100%; height: auto; border-radius: 12px; object-fit: cover;">
         </div>
+      </div>
+    </section>
+
+    <!-- Coverflow Testimonials -->
+    <section class="coverflow-section" aria-label="Customer testimonials">
+      <div class="eyebrow" style="justify-content: center; width: 100%; margin-bottom: 40px; color: #B39DDB;"><span></span> Employee Stories</div>
+      <div class="swiper coverflow-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"Working at SAPXG has been a transformative experience. The opportunities for growth are unmatched."</blockquote>
+              <figcaption>Sarah Jenkins - Lead Analyst</figcaption>
+            </figure>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"The collaborative culture and focus on cutting-edge solutions makes every day exciting."</blockquote>
+              <figcaption>David Chen - Senior Consultant</figcaption>
+            </figure>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"I love the royal treatment we give to our customers. It reflects in the quality of our work."</blockquote>
+              <figcaption>Elena Rodriguez - Project Manager</figcaption>
+            </figure>
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"SAPXG truly values its people and invests heavily in our professional development."</blockquote>
+              <figcaption>Michael Chang - Data Engineer</figcaption>
+            </figure>
+          </div>
+        </div>
+        
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev" style="color: var(--accent);"></div>
+        <div class="swiper-button-next" style="color: var(--accent);"></div>
       </div>
     </section>
     
@@ -506,5 +594,35 @@
     });
   </script>
 <script src="country-search.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    new Swiper('.coverflow-swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loopedSlides: 8,
+      coverflowEffect: {
+        rotate: 22,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      keyboard: {
+        enabled: true,
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
