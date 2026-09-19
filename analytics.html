@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10.0">
+  <link rel="stylesheet" href="styles.css?v=23.0">
   <style>
     .service-page{min-height:100vh;background:var(--grey)}
     .service-page-header{display:flex;align-items:center;justify-content:space-between;padding:24px clamp(22px,8vw,128px);background:var(--white);border-bottom:1px solid var(--line);position:fixed;top:0;left:0;width:100%;z-index:1000;box-sizing:border-box}
@@ -18,7 +18,7 @@
     .service-page-main{max-width:1120px;margin:0 auto;padding:clamp(110px,14vw,170px) clamp(22px,6vw,72px)}
     .service-page-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,8vw,110px);align-items:center}
     .service-page-label{display:flex;align-items:center;gap:10px;color:var(--blue);font:700 15px 'Space Grotesk',sans-serif;letter-spacing:2px;text-transform:uppercase}
-    .service-page-label span{width:9px;height:9px;background:var(--yellow);border-radius:50%}
+    .service-page-label span{width:9px;height:9px;background:var(--yellow);border-radius: 0 !important}
     .service-page h1{font:600 clamp(48px,7vw,92px)/.98 'Space Grotesk',sans-serif;letter-spacing:-1px;margin:24px 0 28px;color:var(--ink)}
     .service-page-intro{max-width:600px;color:var(--muted);font-size:20px;line-height:1.65;margin:0 0 36px}
     .service-page-image{min-height:430px;background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85') center/cover no-repeat;border:1px solid var(--ink);box-shadow:10px 10px 0 var(--yellow)}
@@ -34,10 +34,15 @@
 </head>
 <body>
   <div class="service-page">
-    <header class="service-page-header">
-      <a href="index.html" aria-label="SAPXG home"><img class="full-logo" src="sapxg logo.png" alt="SAPXG - A Smart Analytics & Planning Experts Group"></a>
-      <a class="service-back" href="index.html#services">Back to services <span aria-hidden="true">?</span></a>
-    </header>
+      <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="SAPXG home">
+      <img class="full-logo" src="sapxg logo.png" alt="SAPXG - A Smart Analytics &amp; Planning Experts Group">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html#home">Home</a><a href="index.html#why-us">About Us</a><a href="index.html#services" class="active">Domain &amp; Services</a><a href="career.html">Careers</a><a href="index.html#training">Training Schedule</a><a href="index.html#contact">Contact Us</a><a href="blogs.html">Blogs</a><a href="credits.html">Credits</a>
+    </nav>
+  </header>
     <main class="service-page-main">
       <div class="service-page-grid">
         <div>
