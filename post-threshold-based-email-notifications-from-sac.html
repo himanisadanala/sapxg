@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Threshold-Based Email Notifications from SAC Dashboards — Proactive alerts and automated notification workflows in SAP Analytics Cloud." name="description"/>
+<title>Threshold-Based Email Notifications from SAC Dashboards | SAPXG Tech Private Limited</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css?v=23.0" rel="stylesheet"/>
+<style>
+    .blog-page { min-height: 100vh; background: var(--white); padding-top: 80px; }
+
+    /* Header */
+    .blog-header { display: flex; align-items: center; justify-content: space-between; padding: 24px clamp(22px,8vw,128px); border-bottom: 1px solid var(--line); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--white); box-sizing: border-box; }
+    .blog-header .full-logo { width: 180px; }
+    .blog-back {
+      font: 600 13px 'DM Sans', sans-serif;
+      color: var(--ink); border-bottom: 2px solid var(--yellow);
+      padding-bottom: 3px;
+    }
+    .blog-back:hover { color: var(--blue); }
+
+    /* Content */
+    .blog-content {
+      max-width: 780px; margin: 0 auto;
+      padding: clamp(40px,6vw,72px) clamp(22px,6vw,48px);
+    }
+
+    /* Title */
+    .blog-title-area { margin-bottom: 44px; border-bottom: 1px solid var(--line); padding-bottom: 32px; }
+    .blog-label {
+      display: flex; align-items: center; gap: 9px;
+      color: var(--muted); font: 700 11px 'Space Grotesk', sans-serif;
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px;
+    }
+    .blog-label span {
+      width: 8px; height: 8px; background: var(--yellow); border-radius: 0 !important;
+    }
+    .blog-title-area h1 {
+      font: 600 clamp(28px,4vw,40px)/1.1 'Space Grotesk', sans-serif;
+      letter-spacing: -0.5px; margin: 0 0 12px; color: var(--ink);
+    }
+    .blog-subtitle {
+      color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0;
+    }
+
+    /* ===== Feed ===== */
+    .feed { list-style: none; margin: 0; padding: 0; }
+
+    .feed-item {
+      padding: 28px 0; border-bottom: 1px solid var(--line);
+      transition: background .2s;
+    }
+    .feed-item:first-child { padding-top: 0; }
+    .feed-item:hover { background: var(--grey); margin: 0 -20px; padding-left: 20px; padding-right: 20px; }
+
+    .feed-date {
+      font: 600 11px 'Space Grotesk', sans-serif;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 8px;
+    }
+    .feed-title {
+      font: 600 20px/1.3 'Space Grotesk', sans-serif;
+      color: red; margin: 0 0 8px;
+      transition: color .2s;
+    }
+    .feed-item:hover .feed-title { color: var(--blue); }
+    .feed-desc {
+      font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0;
+      max-width: 620px;
+    }
+    .feed-tag {
+      display: inline-block; margin-top: 10px;
+      padding: 3px 10px; font: 700 9px 'Space Grotesk', sans-serif;
+      letter-spacing: 1px; text-transform: uppercase;
+      background: var(--yellow-soft); color: var(--ink);
+      border-radius: 2px;
+    }
+
+    /* Footer */
+    .blog-footer {
+      margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--line);
+      text-align: center; color: var(--muted); font-size: 12px;
+    }
+    .blog-footer a { color: var(--blue); font-weight: 600; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .blog-header { padding: 18px 22px; }
+      .blog-header .full-logo { width: 160px; }
+      .blog-title-area { margin-bottom: 32px; padding-bottom: 24px; }
+      .feed-title { font-size: 17px; }
+      .feed-desc { font-size: 13px; }
+      .feed-item { padding: 22px 0; }
+      .feed-item:hover { margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+    }
+  </style>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+<div class="blog-page">
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="SAPXG home">
+      <img class="full-logo" src="sapxg logo.png" alt="SAPXG - A Smart Analytics &amp; Planning Experts Group">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html#home">Home</a><a href="index.html#why-us">About Us</a><a href="index.html#services">Domain &amp; Services</a><a href="career.html">Careers</a><a href="index.html#training">Training Schedule</a><a href="index.html#contact">Contact Us</a><a href="blogs.html">Blogs</a><a href="credits.html" class="active">Credits</a>
+    </nav>
+  </header>
+<main class="blog-content">
+<div class="blog-title-area">
+<div class="blog-label"><span></span> Practical Extensions</div>
+<h1>Innovations &amp; Solutions</h1>
+<p class="blog-subtitle">Showcasing our credits of implementing practical extensions for planning, reporting, governance, mobility, and automation.</p>
+</div>
+<ul class="feed" id="blog-feed"><li class="feed-item">
+<div class="feed-date">September 20, 2026</div>
+<h2 class="feed-title">Threshold-Based Email Notifications from SAC Dashboards</h2>
+<div class="feed-desc">
+  <p style="margin-bottom: 14px; font-weight: 600; color: var(--blue);">A highly demanding requirement in SAP Analytics Cloud (SAC) is to send automatic notifications whenever a KPI exceeds a predefined limit.</p>
+  <p style="margin-bottom: 20px; line-height: 1.7;">In many business scenarios, dashboards are expected to do more than simply display KPIs. Business users also expect proactive alerts whenever critical numbers cross a defined threshold so that immediate action can be taken.</p>
+
+  <h3 style="font: 600 16px 'Space Grotesk', sans-serif; color: var(--ink); margin: 28px 0 12px; border-bottom: 2px solid var(--yellow); display: inline-block; padding-bottom: 4px;">A Critical Business Need for Important KPIs</h3>
+  <ul style="list-style-type: none; padding-left: 0; display: grid; gap: 12px; margin-bottom: 24px;">
+    <li style="background: var(--grey); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px;">
+      <strong style="color: var(--ink); display: block; margin-bottom: 4px;">1. Continuous Monitoring</strong>
+      <span style="color: var(--muted); font-size: 14px;">Monitor a KPI available in an SAC dashboard in real time.</span>
+    </li>
+    <li style="background: var(--grey); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px;">
+      <strong style="color: var(--ink); display: block; margin-bottom: 4px;">2. Dynamic Threshold Comparison</strong>
+      <span style="color: var(--muted); font-size: 14px;">Compare the KPI value against a defined business threshold or tolerance limit.</span>
+    </li>
+    <li style="background: var(--grey); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px;">
+      <strong style="color: var(--ink); display: block; margin-bottom: 4px;">3. Automated Alert Triggering</strong>
+      <span style="color: var(--muted); font-size: 14px;">Trigger an automated email alert whenever the threshold condition is met.</span>
+    </li>
+  </ul>
+
+  <h3 style="font: 600 16px 'Space Grotesk', sans-serif; color: var(--ink); margin: 28px 0 12px; border-bottom: 2px solid var(--yellow); display: inline-block; padding-bottom: 4px;">Outcome and Business Value</h3>
+  <p style="margin-bottom: 16px; line-height: 1.7;">
+    By implementing automated, threshold-based alerts, business leaders no longer need to manually monitor dashboards for anomalies. Instead, potential issues are identified proactively and brought to their attention in real time, enabling faster decision-making, improving operational efficiency, and ensuring continuous oversight of key business metrics.
+  </p>
+  <p style="margin-bottom: 20px; line-height: 1.7; font-weight: 500; color: var(--ink);">
+    This successful implementation delivered significant business value while earning well-deserved recognition for our team.
+  </p>
+
+  <div style="background: var(--yellow-soft); border-left: 4px solid var(--yellow); padding: 14px 18px; border-radius: 4px; margin-bottom: 20px;">
+    <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--ink);">
+      <strong>Enable Automated Alerting:</strong> Please reach out to our team to enable automated threshold-based alerting for your SAC dashboards and KPI monitoring.
+    </p>
+  </div>
+
+  <p style="margin-bottom: 0;">Have a threshold notification or automated alerting requirement? Reach us on <a href="https://wa.me/917022278284" style="color: var(--blue); font-weight: 600;">WhatsApp Chat</a> or <a href="index.html#contact" style="color: var(--blue); font-weight: 600;">Contact Us</a>.</p>
+</div>
+<span class="feed-tag">Automation</span>
+</li></ul>
+<div class="blog-footer">
+<p>Have questions? <a href="index.html#contact">Get in touch</a> with our team.</p>
+<p>&copy; 2026 SAPXG Tech Private Limited</p>
+</div>
+</main>
+</div>
+
+
+<a href="https://wa.me/917022278284" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" width="24" height="24" style="width:24px; height:24px;"><path d="M17.47 14.38c-.29-.15-1.73-.85-2-.95s-.46-.15-.66.15-.76.95-.93 1.14-.34.22-.64.07a8.07 8.07 0 01-2.38-1.47 8.94 8.94 0 01-1.65-2.05c-.17-.29 0-.45.13-.6s.29-.34.44-.51.2-.29.29-.48a.53.53 0 000-.51c-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51h-.56a1.07 1.07 0 00-.78.37A3.28 3.28 0 006.14 9.5a5.69 5.69 0 001.2 3.02 13.05 13.05 0 005.01 4.43 16.56 16.56 0 001.67.62 4.03 4.03 0 001.84.12 3.02 3.02 0 001.98-1.4 2.44 2.44 0 00.17-1.4c-.07-.12-.27-.19-.56-.34m-5.42 7.41A9.88 9.88 0 017 20.14l-.36-.21-3.73.98.99-3.64-.24-.37a9.88 9.88 0 01-1.51-5.26A9.87 9.87 0 0112.05 1.8 9.82 9.82 0 0119 4.69a9.82 9.82 0 012.87 6.96 9.87 9.87 0 01-9.87 9.87l.05.27zm8.41-18.24A11.81 11.81 0 0012.05 0 11.84 11.84 0 002.05 17.76L0 24l6.39-1.68A11.83 11.83 0 0012.05 24a11.84 11.84 0 0011.84-11.84 11.76 11.76 0 00-3.43-8.61z"/></svg>
+  <span>How can I help you?</span>
+</a>
+</body>
+
+</html>

@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Careers at SAPXG Tech Private Limited. Join us to make smarter decisions with analytics, planning, consulting, training, and technology services.">
+  <title>Careers | SAPXG Tech Private Limited</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=23.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    .career-header {
+      padding: clamp(60px, 8vw, 100px) clamp(22px, 8vw, 128px);
+      background: var(--white);
+      color: var(--ink);
+      text-align: center;
+    }
+    .career-header h1 {
+      font: 600 clamp(40px, 6vw, 68px)/1 'Space Grotesk', sans-serif;
+      margin: 0 0 20px;
+    }
+    .career-header h1 em {
+      color: var(--yellow);
+      font-style: normal;
+    }
+    .career-header p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .jobs-section {
+      padding: clamp(60px, 8vw, 100px) clamp(22px, 8vw, 128px);
+      background: var(--grey);
+    }
+    .job-list {
+      display: grid;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .job-card {
+      background: var(--card); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px;
+      padding: 30px;
+      border: 1px solid transparent;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .job-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 6px 6px 0 var(--yellow);
+      border-color: var(--ink);
+    }
+    .job-card h3 {
+      font: 600 22px 'Space Grotesk', sans-serif;
+      margin: 0 0 10px;
+      color: var(--ink);
+    }
+    .job-card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0 0 20px;
+    }
+    .job-meta {
+      display: flex;
+      gap: 15px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 20px;
+    }
+    .job-meta span {
+      background: var(--yellow-soft);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  
+    .coverflow-section {
+      padding: clamp(60px, 8vw, 100px) 0;
+      background: var(--white);
+      overflow: hidden;
+    }
+    .coverflow-swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: min(80vw, 400px);
+    }
+    .coverflow-item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      background: #fff8d8; /* Butter yellow */
+      padding: 32px;
+      text-align: left;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      margin: 0;
+      height: 100%;
+    }
+    .coverflow-item blockquote {
+      font-size: 18px;
+      color: #1e293b;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .coverflow-item figcaption {
+      font-size: 14px;
+      color: #b45309;
+      margin-top: auto;
+      font-weight: 700;
+    }
+    .swiper-pagination-bullet {
+      background: #F59E0B !important;
+    }
+
+  </style>
+</head>
+<body>
+    <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="SAPXG home">
+      <img class="full-logo" src="sapxg logo.png" alt="SAPXG - A Smart Analytics &amp; Planning Experts Group">
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html#home">Home</a><a href="index.html#why-us">About Us</a><a href="index.html#services">Domain &amp; Services</a><a href="career.html" class="active">Careers</a><a href="index.html#training">Training Schedule</a><a href="index.html#contact">Contact Us</a><a href="blogs.html">Blogs</a><a href="credits.html">Credits</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="journey-section" style="padding: clamp(60px, 8vw, 100px) clamp(22px, 8vw, 128px); background: var(--ink);">
+      <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
+        <div>
+          <h2 style="font: 700 clamp(36px, 6vw, 52px)/1.1 'Space Grotesk', sans-serif; margin-bottom: 24px; color: var(--white); letter-spacing: -1px;">Begin The Journey With / <br>Through Us</h2>
+          <p style="font-size: 18px; line-height: 1.6; color: #cbd5e1; margin-bottom: 24px;">Our group of seasoned experts, having sound experience in respective domains, ensure a long-lasting relationship with Global Customers fulfilling Customer's Business needs.</p>
+          <p style="font-size: 18px; line-height: 1.6; color: #cbd5e1; margin-bottom: 32px;">These experts bring to our notice both the domain skills required and job positions available in Customer projects and that makes us bridge your career journey.</p>
+        </div>
+        <div>
+          <img src="career_support.jpg" alt="Career support professional" style="width: 100%; height: auto; border-radius: 12px; object-fit: cover;">
+        </div>
+      </div>
+    </section>
+
+    <!-- Coverflow Testimonials -->
+    <section class="coverflow-section" aria-label="Customer testimonials">
+      <div class="eyebrow" style="justify-content: center; width: 100%; margin-bottom: 40px; color: #B39DDB;"><span></span> Employee Stories</div>
+      <div class="swiper coverflow-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"Working at SAPXG has been a transformative experience. The opportunities for growth are unmatched."</blockquote>
+              <figcaption>Sarah Jenkins - Lead Analyst</figcaption>
+            </figure>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"The collaborative culture and focus on cutting-edge solutions makes every day exciting."</blockquote>
+              <figcaption>David Chen - Senior Consultant</figcaption>
+            </figure>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"I love the royal treatment we give to our customers. It reflects in the quality of our work."</blockquote>
+              <figcaption>Elena Rodriguez - Project Manager</figcaption>
+            </figure>
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"SAPXG truly values its people and invests heavily in our professional development."</blockquote>
+              <figcaption>Michael Chang - Data Engineer</figcaption>
+            </figure>
+          </div>
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"Working at SAPXG has been a transformative experience. The opportunities for growth are unmatched."</blockquote>
+              <figcaption>Sarah Jenkins - Lead Analyst</figcaption>
+            </figure>
+          </div>
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"The collaborative culture and focus on cutting-edge solutions makes every day exciting."</blockquote>
+              <figcaption>David Chen - Senior Consultant</figcaption>
+            </figure>
+          </div>
+          <!-- Slide 7 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"I love the royal treatment we give to our customers. It reflects in the quality of our work."</blockquote>
+              <figcaption>Elena Rodriguez - Project Manager</figcaption>
+            </figure>
+          </div>
+          <!-- Slide 8 -->
+          <div class="swiper-slide">
+            <figure class="coverflow-item">
+              <blockquote>"SAPXG truly values its people and invests heavily in our professional development."</blockquote>
+              <figcaption>Michael Chang - Data Engineer</figcaption>
+            </figure>
+          </div>
+        </div>
+        
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev" style="color: var(--accent);"></div>
+        <div class="swiper-button-next" style="color: var(--accent);"></div>
+      </div>
+    </section>
+    
+    <section class="content-section" style="background: var(--white); padding: clamp(40px, 6vw, 80px) clamp(22px, 8vw, 128px); max-width: 1000px; margin: 0 auto;">
+      <h3 style="font: 700 28px/1.2 'Space Grotesk', sans-serif; margin-bottom: 30px; color: var(--ink);">Upload your CV</h3>
+      <form class="register-form" id="register-form">
+        <label>Name
+          <input type="text" name="fullname" placeholder="Your full name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="you@company.com" required>
+        </label>
+        <label>Contact Number
+          <div style="display: flex; gap: 8px;">
+            <select name="country_code" style="width: 100px; flex-shrink: 0;" required>
+              <option value="+1">+1 (US)</option>
+              <option value="+44">+44 (UK)</option>
+              <option value="+61">+61 (AU)</option>
+              <option value="+91" selected>+91 (IN)</option>
+              <option value="+49">+49 (DE)</option>
+              <option value="+93">+93 (AF)</option>
+              <option value="+355">+355 (AL)</option>
+              <option value="+213">+213 (DZ)</option>
+              <option value="+1684">+1684 (AS)</option>
+              <option value="+376">+376 (AD)</option>
+              <option value="+244">+244 (AO)</option>
+              <option value="+1264">+1264 (AI)</option>
+              <option value="+672">+672 (AQ)</option>
+              <option value="+1268">+1268 (AG)</option>
+              <option value="+54">+54 (AR)</option>
+              <option value="+374">+374 (AM)</option>
+              <option value="+297">+297 (AW)</option>
+              <option value="+43">+43 (AT)</option>
+              <option value="+994">+994 (AZ)</option>
+              <option value="+1242">+1242 (BS)</option>
+              <option value="+973">+973 (BH)</option>
+              <option value="+880">+880 (BD)</option>
+              <option value="+1246">+1246 (BB)</option>
+              <option value="+375">+375 (BY)</option>
+              <option value="+32">+32 (BE)</option>
+              <option value="+501">+501 (BZ)</option>
+              <option value="+229">+229 (BJ)</option>
+              <option value="+1441">+1441 (BM)</option>
+              <option value="+975">+975 (BT)</option>
+              <option value="+591">+591 (BO)</option>
+              <option value="+387">+387 (BA)</option>
+              <option value="+267">+267 (BW)</option>
+              <option value="+55">+55 (BR)</option>
+              <option value="+246">+246 (IO)</option>
+              <option value="+1284">+1284 (VG)</option>
+              <option value="+673">+673 (BN)</option>
+              <option value="+359">+359 (BG)</option>
+              <option value="+226">+226 (BF)</option>
+              <option value="+257">+257 (BI)</option>
+              <option value="+855">+855 (KH)</option>
+              <option value="+237">+237 (CM)</option>
+              <option value="+238">+238 (CV)</option>
+              <option value="+1345">+1345 (KY)</option>
+              <option value="+236">+236 (CF)</option>
+              <option value="+235">+235 (TD)</option>
+              <option value="+56">+56 (CL)</option>
+              <option value="+86">+86 (CN)</option>
+              <option value="+57">+57 (CO)</option>
+              <option value="+269">+269 (KM)</option>
+              <option value="+682">+682 (CK)</option>
+              <option value="+506">+506 (CR)</option>
+              <option value="+385">+385 (HR)</option>
+              <option value="+53">+53 (CU)</option>
+              <option value="+599">+599 (CW)</option>
+              <option value="+357">+357 (CY)</option>
+              <option value="+420">+420 (CZ)</option>
+              <option value="+243">+243 (CD)</option>
+              <option value="+45">+45 (DK)</option>
+              <option value="+253">+253 (DJ)</option>
+              <option value="+1767">+1767 (DM)</option>
+              <option value="+1809">+1809 (DO)</option>
+              <option value="+670">+670 (TL)</option>
+              <option value="+593">+593 (EC)</option>
+              <option value="+20">+20 (EG)</option>
+              <option value="+503">+503 (SV)</option>
+              <option value="+240">+240 (GQ)</option>
+              <option value="+291">+291 (ER)</option>
+              <option value="+372">+372 (EE)</option>
+              <option value="+251">+251 (ET)</option>
+              <option value="+500">+500 (FK)</option>
+              <option value="+298">+298 (FO)</option>
+              <option value="+679">+679 (FJ)</option>
+              <option value="+358">+358 (FI)</option>
+              <option value="+33">+33 (FR)</option>
+              <option value="+689">+689 (PF)</option>
+              <option value="+241">+241 (GA)</option>
+              <option value="+220">+220 (GM)</option>
+              <option value="+995">+995 (GE)</option>
+              <option value="+233">+233 (GH)</option>
+              <option value="+350">+350 (GI)</option>
+              <option value="+30">+30 (GR)</option>
+              <option value="+299">+299 (GL)</option>
+              <option value="+1473">+1473 (GD)</option>
+              <option value="+1671">+1671 (GU)</option>
+              <option value="+502">+502 (GT)</option>
+              <option value="+44">+44 (GG)</option>
+              <option value="+224">+224 (GN)</option>
+              <option value="+245">+245 (GW)</option>
+              <option value="+592">+592 (GY)</option>
+              <option value="+509">+509 (HT)</option>
+              <option value="+504">+504 (HN)</option>
+              <option value="+852">+852 (HK)</option>
+              <option value="+36">+36 (HU)</option>
+              <option value="+354">+354 (IS)</option>
+              <option value="+62">+62 (ID)</option>
+              <option value="+98">+98 (IR)</option>
+              <option value="+964">+964 (IQ)</option>
+              <option value="+353">+353 (IE)</option>
+              <option value="+44">+44 (IM)</option>
+              <option value="+972">+972 (IL)</option>
+              <option value="+39">+39 (IT)</option>
+              <option value="+225">+225 (CI)</option>
+              <option value="+1876">+1876 (JM)</option>
+              <option value="+81">+81 (JP)</option>
+              <option value="+44">+44 (JE)</option>
+              <option value="+962">+962 (JO)</option>
+              <option value="+7">+7 (KZ)</option>
+              <option value="+254">+254 (KE)</option>
+              <option value="+686">+686 (KI)</option>
+              <option value="+383">+383 (XK)</option>
+              <option value="+965">+965 (KW)</option>
+              <option value="+996">+996 (KG)</option>
+              <option value="+856">+856 (LA)</option>
+              <option value="+371">+371 (LV)</option>
+              <option value="+961">+961 (LB)</option>
+              <option value="+266">+266 (LS)</option>
+              <option value="+231">+231 (LR)</option>
+              <option value="+218">+218 (LY)</option>
+              <option value="+423">+423 (LI)</option>
+              <option value="+370">+370 (LT)</option>
+              <option value="+352">+352 (LU)</option>
+              <option value="+853">+853 (MO)</option>
+              <option value="+389">+389 (MK)</option>
+              <option value="+261">+261 (MG)</option>
+              <option value="+265">+265 (MW)</option>
+              <option value="+60">+60 (MY)</option>
+              <option value="+960">+960 (MV)</option>
+              <option value="+223">+223 (ML)</option>
+              <option value="+356">+356 (MT)</option>
+              <option value="+692">+692 (MH)</option>
+              <option value="+222">+222 (MR)</option>
+              <option value="+230">+230 (MU)</option>
+              <option value="+262">+262 (YT)</option>
+              <option value="+52">+52 (MX)</option>
+              <option value="+691">+691 (FM)</option>
+              <option value="+373">+373 (MD)</option>
+              <option value="+377">+377 (MC)</option>
+              <option value="+976">+976 (MN)</option>
+              <option value="+382">+382 (ME)</option>
+              <option value="+1664">+1664 (MS)</option>
+              <option value="+212">+212 (MA)</option>
+              <option value="+258">+258 (MZ)</option>
+              <option value="+95">+95 (MM)</option>
+              <option value="+264">+264 (NA)</option>
+              <option value="+674">+674 (NR)</option>
+              <option value="+977">+977 (NP)</option>
+              <option value="+31">+31 (NL)</option>
+              <option value="+599">+599 (AN)</option>
+              <option value="+687">+687 (NC)</option>
+              <option value="+64">+64 (NZ)</option>
+              <option value="+505">+505 (NI)</option>
+              <option value="+227">+227 (NE)</option>
+              <option value="+234">+234 (NG)</option>
+              <option value="+683">+683 (NU)</option>
+              <option value="+850">+850 (KP)</option>
+              <option value="+1670">+1670 (MP)</option>
+              <option value="+47">+47 (NO)</option>
+              <option value="+968">+968 (OM)</option>
+              <option value="+92">+92 (PK)</option>
+              <option value="+680">+680 (PW)</option>
+              <option value="+970">+970 (PS)</option>
+              <option value="+507">+507 (PA)</option>
+              <option value="+675">+675 (PG)</option>
+              <option value="+595">+595 (PY)</option>
+              <option value="+51">+51 (PE)</option>
+              <option value="+63">+63 (PH)</option>
+              <option value="+870">+870 (PN)</option>
+              <option value="+48">+48 (PL)</option>
+              <option value="+351">+351 (PT)</option>
+              <option value="+1787">+1787 (PR)</option>
+              <option value="+974">+974 (QA)</option>
+              <option value="+242">+242 (CG)</option>
+              <option value="+262">+262 (RE)</option>
+              <option value="+40">+40 (RO)</option>
+              <option value="+7">+7 (RU)</option>
+              <option value="+250">+250 (RW)</option>
+              <option value="+590">+590 (BL)</option>
+              <option value="+290">+290 (SH)</option>
+              <option value="+1869">+1869 (KN)</option>
+              <option value="+1758">+1758 (LC)</option>
+              <option value="+590">+590 (MF)</option>
+              <option value="+508">+508 (PM)</option>
+              <option value="+1784">+1784 (VC)</option>
+              <option value="+685">+685 (WS)</option>
+              <option value="+378">+378 (SM)</option>
+              <option value="+239">+239 (ST)</option>
+              <option value="+966">+966 (SA)</option>
+              <option value="+221">+221 (SN)</option>
+              <option value="+381">+381 (RS)</option>
+              <option value="+248">+248 (SC)</option>
+              <option value="+232">+232 (SL)</option>
+              <option value="+65">+65 (SG)</option>
+              <option value="+1721">+1721 (SX)</option>
+              <option value="+421">+421 (SK)</option>
+              <option value="+386">+386 (SI)</option>
+              <option value="+677">+677 (SB)</option>
+              <option value="+252">+252 (SO)</option>
+              <option value="+27">+27 (ZA)</option>
+              <option value="+82">+82 (KR)</option>
+              <option value="+211">+211 (SS)</option>
+              <option value="+34">+34 (ES)</option>
+              <option value="+94">+94 (LK)</option>
+              <option value="+249">+249 (SD)</option>
+              <option value="+597">+597 (SR)</option>
+              <option value="+47">+47 (SJ)</option>
+              <option value="+268">+268 (SZ)</option>
+              <option value="+46">+46 (SE)</option>
+              <option value="+41">+41 (CH)</option>
+              <option value="+963">+963 (SY)</option>
+              <option value="+886">+886 (TW)</option>
+              <option value="+992">+992 (TJ)</option>
+              <option value="+255">+255 (TZ)</option>
+              <option value="+66">+66 (TH)</option>
+              <option value="+228">+228 (TG)</option>
+              <option value="+690">+690 (TK)</option>
+              <option value="+676">+676 (TO)</option>
+              <option value="+1868">+1868 (TT)</option>
+              <option value="+216">+216 (TN)</option>
+              <option value="+90">+90 (TR)</option>
+              <option value="+993">+993 (TM)</option>
+              <option value="+1649">+1649 (TC)</option>
+              <option value="+688">+688 (TV)</option>
+              <option value="+1340">+1340 (VI)</option>
+              <option value="+256">+256 (UG)</option>
+              <option value="+380">+380 (UA)</option>
+              <option value="+971">+971 (AE)</option>
+              <option value="+598">+598 (UY)</option>
+              <option value="+998">+998 (UZ)</option>
+              <option value="+678">+678 (VU)</option>
+              <option value="+379">+379 (VA)</option>
+              <option value="+58">+58 (VE)</option>
+              <option value="+84">+84 (VN)</option>
+              <option value="+681">+681 (WF)</option>
+              <option value="+212">+212 (EH)</option>
+              <option value="+967">+967 (YE)</option>
+              <option value="+260">+260 (ZM)</option>
+              <option value="+263">+263 (ZW)</option>
+            </select>
+            <input type="tel" name="phone" placeholder="Contact number" required style="flex-grow: 1;">
+          </div>
+        </label>
+        <label>Total Experience
+          <input type="text" name="totalexp" placeholder="e.g. 5 years" required>
+        </label>
+        <label>Relevant Experience
+          <input type="text" name="relevantexp" placeholder="e.g. 3 years in SAP" required>
+        </label>
+        <label class="full-width">Number of projects completed in relevant platform
+          <input type="text" name="projects" placeholder="e.g. 4 projects" required>
+        </label>
+        <label class="full-width">Upload CV / Resume
+          <div class="file-upload-area" id="file-upload-area">
+            <input type="file" name="resume" accept=".pdf,.doc,.docx" id="resume-input">
+            <div class="file-upload-icon">📄</div>
+            <p class="file-upload-text">Click or drag to upload your CV</p>
+            <p class="file-upload-hint">PDF, DOC, or DOCX — Max 5MB</p>
+            <p class="file-name" id="file-name"></p>
+          </div>
+        </label>
+        <div class="full-width" style="display: grid; gap: 6px; font: 700 10px 'Space Grotesk', sans-serif; text-transform: uppercase; letter-spacing: 1.2px; color: var(--ink);">
+          Technologies / Platforms
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="technologies" value="SAC"> SAC</label>
+            <label><input type="checkbox" name="technologies" value="DATASPHERE"> DATASPHERE</label>
+            <label><input type="checkbox" name="technologies" value="BI/BW"> BI/BW</label>
+            <label><input type="checkbox" name="technologies" value="HANA"> HANA</label>
+          </div>
+        </div>
+        <div class="submit-row">
+          <button class="register-btn" type="submit">Submit Registration <span>↗</span></button>
+          <p class="register-status" id="register-status" role="status"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <a class="brand" href="index.html">
+        <img class="full-logo footer-logo" src="sapxg logo.png" alt="SAPXG - A Smart Analytics & Planning Experts Group">
+      </a>
+    </div>`n    <p class="footer-tagline">Exceed expectations. Plan smarter.</p>
+    <span class="copyright">© 2026 SAPXG Tech Private Limited</span>
+  </footer>
+  <script src="script.js?v=5"></script>
+
+  <a href="https://wa.me/917022278284" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" style="width:24px; height:24px;"><path d="M17.47 14.38c-.29-.15-1.73-.85-2-.95s-.46-.15-.66.15-.76.95-.93 1.14-.34.22-.64.07a8.07 8.07 0 01-2.38-1.47 8.94 8.94 0 01-1.65-2.05c-.17-.29 0-.45.13-.6s.29-.34.44-.51.2-.29.29-.48a.53.53 0 000-.51c-.07-.15-.66-1.59-.9-2.18-.24-.57-.48-.5-.66-.51h-.56a1.07 1.07 0 00-.78.37A3.28 3.28 0 006.14 9.5a5.69 5.69 0 001.2 3.02 13.05 13.05 0 005.01 4.43 16.56 16.56 0 001.67.62 4.03 4.03 0 001.84.12 3.02 3.02 0 001.98-1.4 2.44 2.44 0 00.17-1.4c-.07-.12-.27-.19-.56-.34m-5.42 7.41A9.88 9.88 0 017 20.14l-.36-.21-3.73.98.99-3.64-.24-.37a9.88 9.88 0 01-1.51-5.26A9.87 9.87 0 0112.05 1.8 9.82 9.82 0 0119 4.69a9.82 9.82 0 012.87 6.96 9.87 9.87 0 01-9.87 9.87l.05.27zm8.41-18.24A11.81 11.81 0 0012.05 0 11.84 11.84 0 002.05 17.76L0 24l6.39-1.68A11.83 11.83 0 0012.05 24a11.84 11.84 0 0011.84-11.84 11.76 11.76 0 00-3.43-8.61z"/></svg>
+    <span>How can I help you?</span>
+  </a>
+
+<script>
+    // Show selected file name
+    const resumeInput = document.getElementById('resume-input');
+    const fileName = document.getElementById('file-name');
+    resumeInput.addEventListener('change', () => {
+      if (resumeInput.files.length > 0) {
+        fileName.textContent = '✅ ' + resumeInput.files[0].name;
+        fileName.classList.add('visible');
+      } else {
+        fileName.classList.remove('visible');
+      }
+    });
+
+    // Pre-select course from URL parameter
+    const params = new URLSearchParams(window.location.search);
+    const course = params.get('course');
+    if (course) {
+      const courseDisplay = document.getElementById('selected-course');
+      courseDisplay.textContent = '📋 ' + course;
+      const select = document.getElementById('program-select');
+      for (let opt of select.options) {
+        if (opt.value === course) { opt.selected = true; break; }
+      }
+    }
+
+    // Form submission — connected to Google Sheets + CV upload to Drive
+    const REGISTER_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyzZ1y0TqBU66BJ2jrtrocjTgBtqVBd3WVbdVHc4HF7Y1uGQs14Nr3Z5xbw2W7vxYjVnQ/exec';
+    const form = document.getElementById('register-form');
+    const status = document.getElementById('register-status');
+
+    // Convert file to base64
+    function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const base64 = reader.result.split(',')[1]; // remove data:...;base64, prefix
+          resolve(base64);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.register-btn');
+      const originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = 'Uploadingâ€¦ â³';
+
+      const payload = {
+        fullname: form.fullname.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        totalexp: form.totalexp.value,
+        relevantexp: form.relevantexp.value,
+        projects: form.projects.value,
+        technologies: Array.from(form.querySelectorAll('input[name="technologies"]:checked')).map(cb => cb.value).join(', '),
+        fileData: '',
+        fileName: '',
+        fileType: ''
+      };
+
+      // Read CV file if uploaded
+      const fileInput = document.getElementById('resume-input');
+      if (fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        if (file.size > 5 * 1024 * 1024) {
+          status.textContent = 'âŒ File too large. Max 5MB.';
+          status.style.color = '#dc2626';
+          btn.disabled = false;
+          btn.innerHTML = originalText;
+          return;
+        }
+        btn.innerHTML = 'Uploading CVâ€¦ â³';
+        payload.fileData = await fileToBase64(file);
+        payload.fileName = file.name;
+        payload.fileType = file.type;
+      }
+
+      try {
+        await fetch(REGISTER_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify(payload)
+        });
+        status.textContent = '✅ Registration submitted! We will contact you soon.';
+        status.style.color = '#16804c';
+        form.reset();
+        fileName.classList.remove('visible');
+        document.getElementById('selected-course').textContent = '';
+      } catch (err) {
+        status.textContent = 'âŒ Something went wrong. Please try again.';
+        status.style.color = '#dc2626';
+      }
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+    });
+  </script>
+<script src="country-search.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    new Swiper('.coverflow-swiper', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loop: true,
+      loopAdditionalSlides: 4,
+      rewind: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      coverflowEffect: {
+        rotate: 22,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      keyboard: {
+        enabled: true,
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
