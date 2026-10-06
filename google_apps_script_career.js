@@ -23,13 +23,18 @@ function doPost(e) {
       data = JSON.parse(e.postData.contents);
     }
     
+    // Format timestamp in Indian Standard Time (IST / GMT+05:30)
+    var formattedTimestamp = Utilities.formatDate(new Date(), "GMT+05:30", "dd/MM/yyyy HH:mm:ss");
+    
     // Append a new row with the form data
     sheet.appendRow([
-      data.name,           // Name
-      data.email,          // Email
-      data.phone,          // Contact Number
-      data.brief,          // Brief on why you want to take this training
-      data.training_code   // Training Code
+      data.name,           // A: Name
+      data.email,          // B: Email
+      data.phone,          // C: Contact Number
+      data.training_code,  // D: Training Code
+      data.brief,          // E: Brief
+      data.source || '',   // F: Source Link (which WhatsApp link they came from)
+      formattedTimestamp    // G: Timestamp
     ]);
     
     return ContentService

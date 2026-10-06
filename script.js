@@ -67,10 +67,12 @@ if (contactForm && formStatus) {
     const originalText = submitBtn.innerHTML;
 
     // Collect form data as JSON
+    const countryCode = contactForm.querySelector('[name="country_code"]').value;
+    const phoneNumber = contactForm.querySelector('[name="phone"]').value;
     const formData = {
       name: contactForm.querySelector('[name="name"]').value,
       email: contactForm.querySelector('[name="email"]').value,
-      phone: contactForm.querySelector('[name="phone"]').value,
+      phone: "'" + countryCode + '  ' + phoneNumber,
       service: contactForm.querySelector('[name="service"]').value,
       message: contactForm.querySelector('[name="message"]').value,
     };
@@ -105,6 +107,34 @@ if (contactForm && formStatus) {
 }
 
 if (careerForm) {
+  // ── Auto-select course from URL parameter ──
+  const urlParams = new URLSearchParams(window.location.search);
+  const courseParam = urlParams.get('course');
+  const trainingSelect = careerForm.querySelector('[name="training_code"]');
+  const selectedCourseBadge = document.getElementById('selected-course');
+
+  if (courseParam && trainingSelect) {
+    // Find the option whose value starts with the course code
+    const matchingOption = Array.from(trainingSelect.options).find(
+      opt => opt.value.startsWith(courseParam)
+    );
+    if (matchingOption) {
+      trainingSelect.value = matchingOption.value;
+      // Lock the dropdown so the user can't change it
+      trainingSelect.disabled = true;
+      // Add a hidden input so the value is still sent on submit
+      const hiddenInput = document.createElement('input');
+      hiddenInput.type = 'hidden';
+      hiddenInput.name = 'training_code';
+      hiddenInput.value = matchingOption.value;
+      careerForm.appendChild(hiddenInput);
+      // Show the course name in the header badge
+      if (selectedCourseBadge) {
+        selectedCourseBadge.textContent = '📌 ' + matchingOption.value;
+      }
+    }
+  }
+
   careerForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -113,12 +143,17 @@ if (careerForm) {
     const originalText = submitBtn.innerHTML;
 
     // Collect form data as JSON
+    const countryCode = careerForm.querySelector('[name="country_code"]').value;
+    const phoneNumber = careerForm.querySelector('[name="phone"]').value;
     const formData = {
       name: careerForm.querySelector('[name="name"]').value,
       email: careerForm.querySelector('[name="email"]').value,
-      phone: careerForm.querySelector('[name="phone"]').value,
-      training_code: careerForm.querySelector('[name="training_code"]').value,
+      phone: "'" + countryCode + '  ' + phoneNumber,
+      training_code: trainingSelect.disabled
+        ? careerForm.querySelector('input[name="training_code"]').value
+        : trainingSelect.value,
       brief: careerForm.querySelector('[name="brief"]').value,
+      source: window.location.href,
     };
 
     // Show loading state
@@ -139,6 +174,15 @@ if (careerForm) {
       statusMsg.textContent = '✅ Thank you! Your application has been submitted successfully.';
       statusMsg.style.color = '#16804c';
       careerForm.reset();
+      // If course was locked via URL, re-apply after reset
+      if (courseParam && trainingSelect) {
+        const reMatch = Array.from(trainingSelect.options).find(
+          opt => opt.value.startsWith(courseParam)
+        );
+        if (reMatch) {
+          trainingSelect.value = reMatch.value;
+        }
+      }
     } catch (error) {
       statusMsg.textContent = '❌ Something went wrong. Please try again.';
       statusMsg.style.color = '#dc2626';
