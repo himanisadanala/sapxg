@@ -772,6 +772,9 @@ body {
   color: var(--yellow) !important;
 }
 
+/* Per-row register links are styled in the training section below */
+
+
 /* --- Mobile: hamburger stays visible --- */
 @media (max-width: 760px) {
   .menu-toggle span {
@@ -883,7 +886,7 @@ body {
 
 .training .table-head {
   display: grid !important;
-  grid-template-columns: 2.2fr 1fr 1fr 25px !important;
+  grid-template-columns: 2.2fr 1fr 1fr auto !important;
   gap: 15px !important;
   padding: 0 0 16px !important;
   color: #64748B !important;
@@ -896,7 +899,7 @@ body {
 
 .training .training-row {
   display: grid !important;
-  grid-template-columns: 2.2fr 1fr 1fr 25px !important;
+  grid-template-columns: 2.2fr 1fr 1fr auto !important;
   gap: 15px !important;
   align-items: center !important;
   padding: 22px 0 !important;
@@ -931,10 +934,22 @@ body {
   font-size: 14px !important;
 }
 
-.training .training-row a {
-  font-size: 22px !important;
+.training .training-row a.training-register-link {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
   color: #facc15 !important;
   text-decoration: none !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  border-bottom: 1px solid transparent !important;
+  transition: border-color 0.2s !important;
+  padding: 4px 0 !important;
+  background: none !important;
+}
+.training .training-row a.training-register-link:hover {
+  border-bottom-color: #facc15 !important;
 }
 
 @media (max-width: 1050px) {
@@ -957,8 +972,11 @@ body {
     display: none !important;
   }
   .training .training-row {
-    grid-template-columns: 1fr auto auto !important;
+    grid-template-columns: 1fr !important;
     gap: 8px 14px !important;
+  }
+  .training .training-row a.training-register-link {
+    justify-self: start !important;
   }
 }
 
