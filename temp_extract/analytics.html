@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAPXG analytics services, dashboards, reporting, and data visualization.">
+  <title>Analytics | SAPXG Tech Private Limited</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=5">
+  <style>
+    .service-page{min-height:100vh;background:var(--grey)}
+    .service-page-header{display:flex;align-items:center;justify-content:space-between;padding:24px clamp(22px,8vw,128px);background:var(--white);border-bottom:1px solid var(--line)}
+    .service-page-header .full-logo{width:180px}
+    .service-back{font-weight:700;color:var(--ink);border-bottom:2px solid var(--yellow);padding-bottom:4px}
+    .service-back:hover{color:var(--blue)}
+    .service-page-main{max-width:1120px;margin:0 auto;padding:clamp(70px,10vw,130px) clamp(22px,6vw,72px)}
+    .service-page-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,8vw,110px);align-items:center}
+    .service-page-label{display:flex;align-items:center;gap:10px;color:var(--blue);font:700 15px 'Space Grotesk',sans-serif;letter-spacing:2px;text-transform:uppercase}
+    .service-page-label span{width:9px;height:9px;background:var(--yellow);border-radius:50%}
+    .service-page h1{font:600 clamp(48px,7vw,92px)/.98 'Space Grotesk',sans-serif;letter-spacing:-1px;margin:24px 0 28px;color:var(--ink)}
+    .service-page-intro{max-width:600px;color:var(--muted);font-size:20px;line-height:1.65;margin:0 0 36px}
+    .service-page-image{min-height:430px;background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85') center/cover no-repeat;border:1px solid var(--ink);box-shadow:10px 10px 0 var(--yellow)}
+    .service-page-details{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:90px}
+    .service-page-detail{padding:28px;background:var(--white);border-top:3px solid var(--yellow)}
+    .service-page-detail h2{font:600 23px 'Space Grotesk',sans-serif;margin:0 0 10px;color:var(--ink)}
+    .service-page-detail p{color:var(--muted);font-size:15px;line-height:1.6;margin:0}
+    @media(max-width:760px){.service-page-header{padding:18px 22px}.service-page-header .full-logo{width:160px}.service-page-main{padding-top:60px}.service-page-grid{grid-template-columns:1fr}.service-page h1{font-size:58px}.service-page-intro{font-size:17px}.service-page-image{min-height:280px}.service-page-details{grid-template-columns:1fr;margin-top:60px}}
+    .service-page-label{font-size:22px!important}
+  </style>
+</head>
+<body>
+  <div class="service-page">
+    <header class="service-page-header">
+      <a href="index.html" aria-label="SAPXG home"><img class="full-logo" src="sapxg-logo.png.png" alt="SAPXG - A Smart Analytics & Planning Experts Group"></a>
+      <a class="service-back" href="index.html#services">Back to services <span aria-hidden="true">↗</span></a>
+    </header>
+    <main class="service-page-main">
+      <div class="service-page-grid">
+        <div>
+          <div class="service-page-label"><span></span> Domain & services</div>
+          <h1>Analytics.</h1>
+          <p class="service-page-intro">Turn complex information into clear direction with reporting, dashboards, and data visualization built around the decisions your business needs to make.</p>
+          <a class="button button-dark" href="index.html#contact">Talk to our team <span>↗</span></a>
+        </div>
+        <div class="service-page-image" role="img" aria-label="Analytics dashboard and data visualization"></div>
+      </div>
+      <div class="service-page-details">
+        <article class="service-page-detail"><h2>Reporting</h2><p>Bring your most important business signals into clear, timely reports that teams can act on.</p></article>
+        <article class="service-page-detail"><h2>Dashboards</h2><p>Create focused dashboards that make performance, trends, and opportunities easier to understand.</p></article>
+        <article class="service-page-detail"><h2>Data visualization</h2><p>Present data in a way that helps stakeholders see the story and move confidently.</p></article>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
