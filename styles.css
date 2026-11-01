@@ -917,8 +917,8 @@ body {
   display: inline-block !important;
   padding: 5px 9px !important;
   border-radius: 3px !important;
-  background: #294d1d !important;
-  color: #22c55e !important;
+  background: var(--yellow) !important;
+  color: var(--ink) !important;
 }
 
 .training .training-row small {
