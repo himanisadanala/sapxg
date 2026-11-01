@@ -913,6 +913,14 @@ body {
   line-height: 1.3 !important;
 }
 
+.training .training-table .training-row-open b {
+  display: inline-block !important;
+  padding: 5px 9px !important;
+  border-radius: 3px !important;
+  background: #294d1d !important;
+  color: #22c55e !important;
+}
+
 .training .training-row small {
   display: block !important;
   color: #64748B !important;

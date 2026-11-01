@@ -54,6 +54,14 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
   });
 });
 
+document.querySelectorAll('.training .training-row').forEach((row) => {
+  const status = row.querySelector('strong');
+  const isOpenForRegistration = status
+    && status.textContent.trim().toLowerCase() === 'open for registration';
+
+  row.classList.toggle('training-row-open', Boolean(isOpenForRegistration));
+});
+
 
 // ✅ PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BELOW
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxL4yKMIO9Me92_FB_9l3se0TOM36w-B2yLa0_ufM00JbjZ5AokPuW4QWMbC_kp1hXYSQ/exec';
