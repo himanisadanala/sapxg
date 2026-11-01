@@ -20,5 +20,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
-          server-dir: /
-          state-name: .ftp-deploy-sync-state-root.json
+          server-dir: /domains/sapxg.com/public_html/
+          state-name: .ftp-deploy-sync-state-domain-root.json
