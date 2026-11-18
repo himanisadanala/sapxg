@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Check mark</title>
+  <desc id="desc">Red check mark inside a red circle</desc>
+  <circle cx="64" cy="64" r="54" fill="none" stroke="#c62828" stroke-width="9"/>
+  <path d="M36 64l18 18 38-40" fill="none" stroke="#c62828" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
